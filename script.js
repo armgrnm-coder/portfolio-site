@@ -471,6 +471,16 @@ const categories = [
         orionAds: ["orion-ad-01.jpg", "orion-ad-02.jpg", "orion-ad-03.jpg", "orion-ad-04.jpg", "orion-ad-05.jpg", "orion-ad-06.jpg"]
       },
       {
+        title: "20% Off — Mexico Launch Campaign",
+        kind: "Performance marketing",
+        label: "Meta Ads Creative",
+        tools: "Figma · Photoshop",
+        text:
+          "A performance ad set built for Orion Funded's 20% discount promotion targeting Mexican audiences. Each creative was designed around the local market — bold Spanish copy, culturally resonant visuals, and a conversion-focused layout built to drive challenge sign-ups. The set covers multiple challenge types (1-Step and 2-Step) with distinct visual angles per product.",
+        orionAds: ["mexico-ad-01.png", "mexico-ad-02.png", "mexico-ad-03.png", "mexico-ad-04.png"],
+        adCols: 2
+      },
+      {
         title: "Meta Ads and Paid Media Creative",
         kind: "Performance marketing",
         label: "Meta Ads and Paid Media Creative",
