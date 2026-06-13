@@ -167,7 +167,7 @@ const categories = [
     id: "graphic-design",
     title: "Graphic Design",
     deck: "Logos, editorial layouts, posters, infographics, banners, and campaign graphics.",
-    cover: img("graphic-design-cover.png"),
+    cover: img("graphic-design-cover.jpg"),
     projects: [
       {
         title: "Logo Collection",
@@ -175,18 +175,18 @@ const categories = [
         text:
           "A mix of finished marks and logo studies — minimal icons, illustrated symbols, playful lettering, and full identity systems. Some for clients, some just for fun.",
         assets: [
-          "p06-04-320x320.png",
-          "p06-05-320x320.png",
-          "p06-06-320x320.png",
-          "p06-07-480x480.png",
-          "p06-10-320x320.png",
-          "p06-11-320x320.png",
-          "p06-12-320x320.png",
-          "p06-13-320x320.png",
-          "p06-14-320x320.png",
-          "p06-15-320x320.png",
-          "p06-16-320x320.png",
-          "p06-17-320x320.png"
+          "p06-04-320x320.jpg",
+          "p06-05-320x320.jpg",
+          "p06-06-320x320.jpg",
+          "p06-07-480x480.jpg",
+          "p06-10-320x320.jpg",
+          "p06-11-320x320.jpg",
+          "p06-12-320x320.jpg",
+          "p06-13-320x320.jpg",
+          "p06-14-320x320.jpg",
+          "p06-15-320x320.jpg",
+          "p06-16-320x320.jpg",
+          "p06-17-320x320.jpg"
         ]
       },
       {
@@ -195,11 +195,11 @@ const categories = [
         text:
           "End-to-end visual design for the 2025 Presidential Filipinnovation Awards — a national government event celebrating Filipino innovation. Deliverables included backwall booth designs for each finalist company, pull-up banners for venue activation, a rosette lei worn by VIP guests and winners, gift tags for award packages, and stage backdrop design. Every piece maintained the bold, patriotic visual identity of the program.",
         assets: [
-          "filipinno-stage.png",
-          "filipinno-backwall.png",
-          "filipinno-rosette.png",
-          "filipinno-gift-tag.png",
-          { file: "filipinno-pullup-banners.png", contain: true }
+          "filipinno-stage.jpg",
+          "filipinno-backwall.jpg",
+          "filipinno-rosette.jpg",
+          "filipinno-gift-tag.jpg",
+          { file: "filipinno-pullup-banners.jpg", contain: true }
         ]
       },
       {
@@ -208,7 +208,7 @@ const categories = [
         text:
           "A 67-page Training Module Kit produced for the 2025 Presidential Filipinnovation Awards — a government-backed startup mentoring and bootcamp program. Covers strategic partnerships, IP & regulatory compliance, business model canvas, and innovation frameworks. Designed in InDesign for wide distribution to startup founders and innovators across the Philippines.",
         tools: "Adobe InDesign",
-        assets: ["filipinnovation-training-module-kit.png"],
+        assets: ["filipinnovation-training-module-kit.jpg"],
         containImage: true
       },
       {
@@ -216,7 +216,7 @@ const categories = [
         kind: "Print design & brand collateral",
         text:
           "A trifold brochure designed for Ming's Dim Sum, a startup restaurant client. Warm, inviting layout with a focus on appetite appeal — balancing photography, menu highlights, and brand personality in a compact, shareable format.",
-        assets: ["mings-dim-sum-brochure.png"],
+        assets: ["mings-dim-sum-brochure.jpg"],
         containImage: true
       },
       {
@@ -224,7 +224,7 @@ const categories = [
         kind: "Brand identity & presentation design",
         text:
           "A full creative branding and marketing presentation developed for \"Hidden Letters of the Heart\" — a poetry book by Colette. Covers visual identity, mood direction, typography, and marketing strategy, built to communicate the book's intimate, nostalgic tone to publishers and collaborators.",
-        assets: ["hidden-letters-branding.png"],
+        assets: ["hidden-letters-branding.jpg"],
         containImage: true,
         link: "https://drive.google.com/file/d/155Xx5h0u3fWd42jJ605JPzlwc3S8xPU2/view?usp=sharing",
         linkLabel: "Read the full presentation →"
@@ -241,42 +241,42 @@ const categories = [
         kind: "Editorial & print design",
         text:
           "A vintage newspaper-inspired layout for Story of Seasons: Pioneers of Olive Town. Designed to feel nostalgic but still readable as a promotional piece.",
-        assets: ["p07-03-720x540.png", "p07-04-720x511.png"]
+        assets: ["p07-03-720x540.jpg", "p07-04-720x511.jpg"]
       },
       {
         title: "Magazine-Style Educational Layout",
         kind: "Editorial & print design",
         text:
           "Clean typography, structured flow, and soft visuals to make informational content actually feel worth reading.",
-        assets: ["p08-02-465x640.png", "p08-03-465x640.png", "p08-04-465x640.png"]
+        assets: ["p08-02-465x640.jpg", "p08-03-465x640.jpg", "p08-04-465x640.jpg"]
       },
       {
         title: "Graphic Poster Studies",
         kind: "Poster design",
         text:
           "Bold, distorted, clean, playful, experimental — I treated each poster as its own thing instead of forcing one style across all of them.",
-        assets: ["p09-03-504x720.png", "p09-04-511x720.png", "p09-05-509x720.png", "p09-06-509x720.jpg", "p09-07-509x720.png", "p09-08-509x720.png"]
+        assets: ["p09-03-504x720.jpg", "p09-04-511x720.jpg", "p09-05-509x720.jpg", "p09-06-509x720.jpg", "p09-07-509x720.jpg", "p09-08-509x720.jpg"]
       },
       {
         title: "Back to Basics Infographic Campaign",
         kind: "Infographics",
         text:
           "A soft, minimalist infographic series for a nontoxic living brand. Calm, clean, and designed for social media without feeling flat.",
-        assets: ["p10-03-800x450.png", "p10-04-480x480.png", "p10-05-480x480.png", "p10-06-480x480.png", "p10-07-480x480.png", "p10-08-480x480.png", "p10-09-480x480.png"]
+        assets: ["p10-03-800x450.jpg", "p10-04-480x480.jpg", "p10-05-480x480.jpg", "p10-06-480x480.jpg", "p10-07-480x480.jpg", "p10-08-480x480.jpg", "p10-09-480x480.jpg"]
       },
       {
         title: "STRIPPED Awareness Campaign",
         kind: "Infographics",
         text:
           "An advocacy campaign challenging misconceptions about women's clothing and sexual harassment in the Philippines. Designed to be bold, empathetic, and shareable.",
-        assets: ["p12-03-640x640.png", "p12-04-640x640.png", "p12-05-640x640.png", "p12-06-640x640.png", "p13-03-640x640.png", "p13-04-640x640.png", "p13-05-640x640.png", "p13-06-640x640.png"]
+        assets: ["p12-03-640x640.jpg", "p12-04-640x640.jpg", "p12-05-640x640.jpg", "p12-06-640x640.jpg", "p13-03-640x640.jpg", "p13-04-640x640.jpg", "p13-05-640x640.jpg", "p13-06-640x640.jpg"]
       },
       {
         title: "Esports Player Banners",
         kind: "Banners",
         text:
           "Bold contrasts, layered textures, and game-inspired details. Each banner was built around the player's identity, not just aesthetics.",
-        assets: ["p14-04-720x405.jpg", "p14-05-720x405.jpg", "p14-06-720x405.jpg", "p14-07-720x405.jpg", "p14-08-720x405.jpg", "p14-09-720x405.png", "p14-10-720x405.png", "p14-11-720x405.png"]
+        assets: ["p14-04-720x405.jpg", "p14-05-720x405.jpg", "p14-06-720x405.jpg", "p14-07-720x405.jpg", "p14-08-720x405.jpg", "p14-09-720x405.jpg", "p14-10-720x405.jpg", "p14-11-720x405.jpg"]
       }
     ]
   },
@@ -284,7 +284,7 @@ const categories = [
     id: "social-campaigns",
     title: "Social Media Ads & Campaigns",
     deck: "Tournament promotions, gaming services, product posts, Facebook ads, and community campaigns.",
-    cover: img("p15-04-450x800.png"),
+    cover: img("p15-04-450x800.jpg"),
     projects: [
       {
         title: "Valentine's Day Campaign — Spanish & Dubai Audiences",
@@ -340,21 +340,21 @@ const categories = [
         kind: "Social media advertising",
         text:
           "Promotional materials for tournaments, recruitment, and community engagement — designed to stand out in busy feeds while still feeling true to the gaming audience.",
-        assets: ["p15-04-450x800.png", "p15-05-450x800.png", "p15-06-400x400.png", "p15-07-350x350.png", "p15-08-400x400.png", "p15-09-618x800.png", "p15-10-618x800.png"]
+        assets: ["p15-04-450x800.jpg", "p15-05-450x800.jpg", "p15-06-400x400.jpg", "p15-07-350x350.jpg", "p15-08-400x400.jpg", "p15-09-618x800.jpg", "p15-10-618x800.jpg"]
       },
       {
         title: "Rewind PH Tournament Campaigns",
         kind: "Community campaign design",
         text:
           "Tournament posters, countdown posts, Discord invites, and partner promotions. High-energy visuals with familiar game references to build real hype.",
-        assets: ["p16-03-720x509.png", "p16-04-720x509.jpg", "p16-05-480x480.jpg", "p16-06-480x480.jpg", "p16-07-480x480.jpg", "p16-08-640x640.jpg", "p16-09-640x640.png"]
+        assets: ["p16-03-720x509.jpg", "p16-04-720x509.jpg", "p16-05-480x480.jpg", "p16-06-480x480.jpg", "p16-07-480x480.jpg", "p16-08-640x640.jpg", "p16-09-640x640.jpg"]
       },
       {
         title: "Genshin Impact Pilot Service Ads",
         kind: "Facebook ad posters",
         text:
           "A Facebook ad campaign for a Genshin pilot service. Matched the color and type direction to the game's aesthetic while keeping the conversion flow clean.",
-        assets: ["p17-02-640x640.png", "p17-03-640x640.png", "p18-02-640x640.png", "p18-03-640x640.png"]
+        assets: ["p17-02-640x640.jpg", "p17-03-640x640.jpg", "p18-02-640x640.jpg", "p18-03-640x640.jpg"]
       },
       {
         title: "Aichwan's Beaded Accessories",
@@ -376,7 +376,7 @@ const categories = [
         kind: "Social media campaign",
         text:
           "Content for a self-service coffee shop in Ivana, Batanes — written and designed for young families and travelers, leaning into the shop's quiet, values-driven charm.",
-        assets: ["p23-02-640x640.png", "p23-03-800x574.png", "p24-02-640x640.png", "p24-03-800x574.png", "p25-02-720x412.png", "p25-03-720x412.png", "p25-04-565x800.png"]
+        assets: ["p23-02-640x640.jpg", "p23-03-800x574.jpg", "p24-02-640x640.jpg", "p24-03-800x574.jpg", "p25-02-720x412.jpg", "p25-03-720x412.jpg", "p25-04-565x800.jpg"]
       }
     ]
   },
@@ -384,21 +384,21 @@ const categories = [
     id: "illustration",
     title: "Digital & Traditional Illustration",
     deck: "Character design, portraits, fan art, vector interiors, ink work, sketches, and traditional studies.",
-    cover: img("p26-03-240x240.png"),
+    cover: img("p26-03-240x240.jpg"),
     projects: [
       {
         title: "Murabito: Cozy Heroine Character Design",
         kind: "Character design",
         text:
           "A character concept for a small indie game idea I had. Soft, whimsical, cottage-core energy — I explored personality and costume through dozens of small sketches before landing on a direction.",
-        assets: ["p26-03-240x240.png", "p26-04-240x240.png", "p26-05-240x240.png", "p26-06-240x240.png", "p26-07-240x240.png", "p26-08-240x240.png", "p26-09-240x240.png", "p26-10-240x240.png", "p26-11-240x240.png", "p26-12-240x240.png", "p26-13-240x240.png"]
+        assets: ["p26-03-240x240.jpg", "p26-04-240x240.jpg", "p26-05-240x240.jpg", "p26-06-240x240.jpg", "p26-07-240x240.jpg", "p26-08-240x240.jpg", "p26-09-240x240.jpg", "p26-10-240x240.jpg", "p26-11-240x240.jpg", "p26-12-240x240.jpg", "p26-13-240x240.jpg"]
       },
       {
         title: "Character Turnaround",
         kind: "Character sheet",
         text:
           "A multi-angle study focused on keeping proportions, silhouette, and design details consistent across views.",
-        assets: ["p27-05-320x320.png", "p27-06-320x320.png", "p27-07-320x320.png", "p27-08-320x320.png", "p27-09-320x320.png", "p27-10-320x320.png", "p27-11-320x320.png", "p27-12-320x320.png", "p27-13-320x320.png"]
+        assets: ["p27-05-320x320.jpg", "p27-06-320x320.jpg", "p27-07-320x320.jpg", "p27-08-320x320.jpg", "p27-09-320x320.jpg", "p27-10-320x320.jpg", "p27-11-320x320.jpg", "p27-12-320x320.jpg", "p27-13-320x320.jpg"]
       },
       {
         title: "Character Sample Animation",
@@ -419,7 +419,7 @@ const categories = [
         kind: "Digital illustration",
         text:
           "Portrait and character explorations across semi-realistic and anime-inspired styles — testing rendering, color, and expression.",
-        assets: ["p30-02-640x640.jpg", "p30-03-400x400.jpg", "p30-04-400x400.png", "p30-05-640x640.png"]
+        assets: ["p30-02-640x640.jpg", "p30-03-400x400.jpg", "p30-04-400x400.jpg", "p30-05-640x640.jpg"]
       },
       {
         title: "Black-and-White Inked Illustrations",
@@ -433,7 +433,7 @@ const categories = [
         kind: "Vector illustration",
         text:
           "Stylized vector studies of different areas in my own home. Simplified forms, muted color, clean lines — more about atmosphere than accuracy.",
-        assets: ["p32-02-400x400.png", "p32-03-400x400.png", "p32-04-400x400.png", "p32-05-400x400.png", "p32-06-400x400.png", "p32-07-400x400.png", "p32-08-400x400.png", "p32-09-400x400.png"]
+        assets: ["p32-02-400x400.jpg", "p32-03-400x400.jpg", "p32-04-400x400.jpg", "p32-05-400x400.jpg", "p32-06-400x400.jpg", "p32-07-400x400.jpg", "p32-08-400x400.jpg", "p32-09-400x400.jpg"]
       },
       {
         title: "Traditional Illustration Studies",
@@ -448,14 +448,14 @@ const categories = [
     id: "motion",
     title: "3D Art & Motion Graphics",
     deck: "3D models, environment design, 3D and 2D animation, and early motion explorations.",
-    cover: img("p35-03-720x404.png"),
+    cover: img("p35-03-720x404.jpg"),
     projects: [
       {
         title: "Basic 3D Model Studies",
         kind: "3ds Max",
         text:
           "Early 3D work — houses, furniture, everyday objects. Mostly learning how to think in three dimensions.",
-        assets: ["p35-03-720x404.png", "p35-04-400x224.png", "p35-05-400x225.png", "p35-06-720x481.png", "p35-07-400x267.png", "p36-02-720x481.png", "p36-03-400x267.png", "p36-04-400x267.png", "p36-05-720x405.png", "p36-06-400x225.png", "p36-07-400x225.png"]
+        assets: ["p35-03-720x404.jpg", "p35-04-400x224.jpg", "p35-05-400x225.jpg", "p35-06-720x481.jpg", "p35-07-400x267.jpg", "p36-02-720x481.jpg", "p36-03-400x267.jpg", "p36-04-400x267.jpg", "p36-05-720x405.jpg", "p36-06-400x225.jpg", "p36-07-400x225.jpg"]
       },
       {
         title: "Cottage Living 3D Environment",
@@ -476,14 +476,14 @@ const categories = [
         kind: "2D animation",
         text:
           "My first completed animation. Nostalgic Harvest Moon energy. I was very proud of this one.",
-        assets: ["p41-03-600x337.png"]
+        assets: ["p41-03-600x337.jpg"]
       },
       {
         title: "Video Editing Samples",
         kind: "Video editing",
         text:
           "Personal projects focused on pacing, mood, and simple visual storytelling.",
-        assets: ["p42-03-600x337.png", "p43-02-600x337.png", "p44-03-600x337.png"]
+        assets: ["p42-03-600x337.jpg", "p43-02-600x337.jpg", "p44-03-600x337.jpg"]
       }
     ]
   },
@@ -524,7 +524,7 @@ const categories = [
         tools: "Figma · Photoshop",
         text:
           "A performance ad set built for Orion Funded's 20% discount promotion targeting Mexican audiences. Each creative was designed around the local market — bold Spanish copy, culturally resonant visuals, and a conversion-focused layout built to drive challenge sign-ups. The set covers multiple challenge types (1-Step and 2-Step) with distinct visual angles per product.",
-        orionAds: ["mexico-ad-01.png", "mexico-ad-02.png", "mexico-ad-03.png", "mexico-ad-04.png"],
+        orionAds: ["mexico-ad-01.jpg", "mexico-ad-02.jpg", "mexico-ad-03.jpg", "mexico-ad-04.jpg"],
         adCols: 2
       },
       {
@@ -533,7 +533,7 @@ const categories = [
         label: "Meta Ads and Paid Media Creative",
         text:
           "The paid-media side of my current work: Meta Ads, Google Ads support, direct-response visuals, campaign copy, and conversion-focused design. Most recent client work isn't public yet — the examples here are pulled from my older archive while newer samples get cleared.",
-        assets: ["p15-09-618x800.png", "p15-10-618x800.png", "p17-02-640x640.png", "p17-03-640x640.png", "p23-02-640x640.png", "p24-02-640x640.png"]
+        assets: ["p15-09-618x800.jpg", "p15-10-618x800.jpg", "p17-02-640x640.jpg", "p17-03-640x640.jpg", "p23-02-640x640.jpg", "p24-02-640x640.jpg"]
       }
     ]
   },
@@ -541,14 +541,14 @@ const categories = [
     id: "affiliate-flyers",
     title: "Affiliate Flyers & Posters",
     deck: "Offer-led posters and promotional layouts for affiliate campaigns and product pushes.",
-    cover: img("p17-02-640x640.png"),
+    cover: img("p17-02-640x640.jpg"),
     projects: [
       {
         title: "Offer-Led Promo Layouts",
         kind: "Affiliate and promotional design",
         text:
           "Affiliate and promotional flyers built around the offer, the benefit, and the next step. Currently showing archive work while newer affiliate samples come through.",
-        assets: ["p17-02-640x640.png", "p17-03-640x640.png", "p19-02-640x640.jpg", "p20-02-640x640.jpg", "p25-04-565x800.png"]
+        assets: ["p17-02-640x640.jpg", "p17-03-640x640.jpg", "p19-02-640x640.jpg", "p20-02-640x640.jpg", "p25-04-565x800.jpg"]
       }
     ]
   },
@@ -556,7 +556,7 @@ const categories = [
     id: "image-refinement",
     title: "Image Enhancement & Refinement",
     deck: "Photo cleanup, color correction, sharpening, and polishing visuals for campaigns.",
-    cover: img("hono-enhance-01.png"),
+    cover: img("hono-enhance-01.jpg"),
     projects: [
       {
         title: "Interior Photo Enhancement & Lightroom Editing",
@@ -565,7 +565,7 @@ const categories = [
         tools: "Lightroom",
         text:
           "A before-and-after image enhancement series created for House of ONO's staged interior projects. The editing focused on transforming raw property photos into brighter, cleaner, and more polished visuals suitable for social media, website portfolios, property marketing, and client presentations. Each image was refined in Lightroom to improve exposure, color balance, sharpness, texture, and overall visual warmth while preserving the original furniture, styling, materials, and spatial accuracy.",
-        assets: ["hono-enhance-01.png", "hono-enhance-02.png", "hono-enhance-03.png", "hono-enhance-04.png", "hono-enhance-05.png", "hono-enhance-06.png", "hono-enhance-07.png", "hono-enhance-08.png", "hono-enhance-09.png", "hono-enhance-10.png"]
+        assets: ["hono-enhance-01.jpg", "hono-enhance-02.jpg", "hono-enhance-03.jpg", "hono-enhance-04.jpg", "hono-enhance-05.jpg", "hono-enhance-06.jpg", "hono-enhance-07.jpg", "hono-enhance-08.jpg", "hono-enhance-09.jpg", "hono-enhance-10.jpg"]
       },
       {
         title: "Photo Refinement and Visual Polish",
@@ -580,7 +580,7 @@ const categories = [
     id: "youtube-thumbnails",
     title: "YouTube Thumbnails",
     deck: "CTR-focused thumbnail systems for finance, trading, and educational video content.",
-    cover: img("p25-02-720x412.png"),
+    cover: img("p25-02-720x412.jpg"),
     projects: [
       {
         title: "CTR-Focused Thumbnail Direction",
@@ -607,14 +607,14 @@ const categories = [
     id: "ui-ux",
     title: "UI/UX Website Design",
     deck: "Website visuals, landing page hierarchy, campaign sections, and conversion-led layouts.",
-    cover: img("p08-02-465x640.png"),
+    cover: img("p08-02-465x640.jpg"),
     projects: [
       {
         title: "Website and Landing Page Direction",
         kind: "UI/UX and web layout",
         text:
           "Visual hierarchy, clear section flow, campaign storytelling, conversion-focused structure. Figma and live site samples coming soon — editorial layout and information-design work in the meantime.",
-        assets: ["p08-02-465x640.png", "p08-03-465x640.png", "p08-04-465x640.png", "p10-03-800x450.png"]
+        assets: ["p08-02-465x640.jpg", "p08-03-465x640.jpg", "p08-04-465x640.jpg", "p10-03-800x450.jpg"]
       }
     ]
   }
@@ -789,9 +789,9 @@ function renderHome() {
             ${[
               { src: "orion-ad-03.jpg",      alt: "Performance ad creative" },
               { src: "valentine-carousel-01.jpg", alt: "Valentine campaign" },
-              { src: "p09-03-504x720.png",   alt: "Graphic poster" },
+              { src: "p09-03-504x720.jpg",   alt: "Graphic poster" },
               { src: "p29-02-571x800.jpg",   alt: "Fan art illustration" },
-              { src: "hono-enhance-01.png",  alt: "Interior photo enhancement" },
+              { src: "hono-enhance-01.jpg",  alt: "Interior photo enhancement" },
               { src: "p45-08-540x720.jpg",   alt: "Photography" },
               { src: "drift-carousel-01.jpg",alt: "Drift campaign" },
               { src: "enero-carousel-01.jpg",alt: "January eBook campaign" }
