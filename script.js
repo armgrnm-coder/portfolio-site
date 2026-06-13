@@ -705,16 +705,19 @@ function updateNav(name) {
   });
 }
 
-function adGrid(assets, cols) {
+function adGrid(assets, cols, title = "", kind = "") {
   const style = cols ? ` style="grid-template-columns: repeat(${cols}, minmax(0, 1fr))"` : "";
   return `
     <div class="ad-grid"${style}>
-      ${assets.map((asset) => {
+      ${assets.map((asset, i) => {
         const file = typeof asset === "string" ? asset : asset.file;
         const badge = typeof asset === "object" && asset.badge ? `<span class="ad-badge">${asset.badge}</span>` : "";
+        const altText = typeof asset === "object" && asset.alt
+          ? asset.alt
+          : `${title}${kind ? " — " + kind : ""} by Air Geronimo${assets.length > 1 ? `, sample ${i + 1}` : ""}`;
         return `
           <a class="ad-tile" href="${img(file)}" target="_blank" rel="noreferrer">
-            <img src="${img(file)}" alt="" loading="lazy" />
+            <img src="${img(file)}" alt="${altText}" loading="lazy" />
             ${badge}
           </a>
         `;
@@ -723,22 +726,23 @@ function adGrid(assets, cols) {
   `;
 }
 
-function imageMosaic(assets, limit = 12, containImage = false) {
+function imageMosaic(assets, limit = 12, containImage = false, title = "", kind = "") {
   return `
     <div class="image-mosaic${containImage ? " image-mosaic--contain" : ""}">
       ${assets
         .slice(0, limit)
-        .map(
-          (asset) => {
-            const file = typeof asset === "object" ? asset.file : asset;
-            const contain = containImage || (typeof asset === "object" && asset.contain);
-            return `
-              <a class="art-tile${contain ? " art-tile--contain" : ""}" href="${img(file)}" target="_blank" rel="noreferrer">
-                <img src="${img(file)}" alt="" loading="lazy" />
-              </a>
-            `;
-          }
-        )
+        .map((asset, i) => {
+          const file = typeof asset === "object" ? asset.file : asset;
+          const contain = containImage || (typeof asset === "object" && asset.contain);
+          const altText = typeof asset === "object" && asset.alt
+            ? asset.alt
+            : `${title}${kind ? " — " + kind : ""} by Air Geronimo${assets.length > 1 ? `, image ${i + 1}` : ""}`;
+          return `
+            <a class="art-tile${contain ? " art-tile--contain" : ""}" href="${img(file)}" target="_blank" rel="noreferrer">
+              <img src="${img(file)}" alt="${altText}" loading="lazy" />
+            </a>
+          `;
+        })
         .join("")}
     </div>
   `;
@@ -1053,7 +1057,7 @@ function renderCategory(category) {
                 <p>${project.text}</p>
                 ${project.tools ? `<p class="project-tools"><span>Tools:</span> ${project.tools}</p>` : ""}
               </div>
-              ${adGrid(project.orionAds, project.adCols)}
+              ${adGrid(project.orionAds, project.adCols, project.title, project.kind)}
             </article>
           ` : `
             <article class="project-block">
@@ -1066,7 +1070,7 @@ function renderCategory(category) {
                 <p>${project.text}</p>
                 ${project.tools ? `<p class="project-tools"><span>Tools:</span> ${project.tools}</p>` : ""}
               </div>
-              ${adGrid(project.orionAds, project.adCols)}
+              ${adGrid(project.orionAds, project.adCols, project.title, project.kind)}
             </article>
           `) : `
             <article class="project-block">
@@ -1080,7 +1084,7 @@ function renderCategory(category) {
                 ${project.tools ? `<p class="project-tools"><span>Tools:</span> ${project.tools}</p>` : ""}
                 ${project.link ? `<a class="${project.linkLabel ? 'btn-outline' : 'text-link'}" href="${project.link}" target="_blank" rel="noreferrer">${project.linkLabel || "See the post →"}</a>` : ""}
               </div>
-              ${imageMosaic(project.assets, 18, project.containImage)}
+              ${imageMosaic(project.assets, 18, project.containImage, project.title, project.kind)}
             </article>
           `
         )
@@ -1134,9 +1138,14 @@ function renderExperience() {
             ${tournaments.map((item) => `<li>${item}</li>`).join("")}
           </ul>
           <div class="tournament-gallery">
-            ${["tournament-01.jpg","tournament-02.jpg","tournament-03.jpg","tournament-04.jpg"].map(f => `
+            ${[
+              ["tournament-01.jpg", "Mobile Legends barangay youth tournament on-site event in Metro Manila, Philippines — event produced by Air Geronimo, photo 1"],
+              ["tournament-02.jpg", "Mobile Legends barangay youth tournament on-site event in Metro Manila, Philippines — event produced by Air Geronimo, photo 2"],
+              ["tournament-03.jpg", "Mobile Legends barangay youth tournament on-site event in Metro Manila, Philippines — event produced by Air Geronimo, photo 3"],
+              ["tournament-04.jpg", "Mobile Legends barangay youth tournament on-site event in Metro Manila, Philippines — event produced by Air Geronimo, photo 4"]
+            ].map(([f, altText]) => `
               <a class="tournament-photo" href="${img(f)}" target="_blank" rel="noreferrer">
-                <img src="${img(f)}" alt="Tournament event photo" loading="lazy" />
+                <img src="${img(f)}" alt="${altText}" loading="lazy" />
               </a>
             `).join("")}
           </div>
