@@ -639,14 +639,18 @@ const categories = [
     id: "ui-ux",
     title: "UI/UX Website Design",
     deck: "Website visuals, landing page hierarchy, campaign sections, and conversion-led layouts.",
-    cover: img("p08-02-465x640.jpg"),
+    cover: img("orion-xmas-landing.jpg"),
     projects: [
       {
-        title: "Website and Landing Page Direction",
+        title: "Orion Mega Giveaway — Christmas Campaign",
         kind: "UI/UX and web layout",
+        tools: "Figma · Photoshop",
         text:
-          "Visual hierarchy, clear section flow, campaign storytelling, conversion-focused structure. Figma and live site samples coming soon — editorial layout and information-design work in the meantime.",
-        assets: ["p08-02-465x640.jpg", "p08-03-465x640.jpg", "p08-04-465x640.jpg", "p10-03-800x450.jpg"]
+          "Full campaign website for Orion Funded's Christmas Mega Giveaway — a chance to win a Rolex. Dark, moody aesthetic built to match Orion's brand identity. Deliverables included the full landing page and checkout experience.",
+        websiteShowcase: {
+          tall: "orion-xmas-landing.jpg",
+          wide: "orion-xmas-checkout.jpg"
+        }
       }
     ]
   }
@@ -735,6 +739,26 @@ function updateNav(name) {
   document.querySelectorAll(".site-nav a").forEach((link) => {
     link.classList.toggle("active", link.getAttribute("href") === `#${name}`);
   });
+}
+
+function websiteShowcase(tall, wide, title) {
+  return `
+    <div class="ws-showcase">
+      <a class="ws-tall-wrap" href="${img(tall)}" target="_blank" rel="noreferrer">
+        <img src="${img(tall)}" alt="${title} — full landing page design by Air Geronimo" loading="lazy" />
+        <span class="ws-tall-label">↕ Full Page — Click to View</span>
+      </a>
+      <div class="ws-right">
+        <a class="ws-wide-wrap" href="${img(wide)}" target="_blank" rel="noreferrer">
+          <img src="${img(wide)}" alt="${title} — checkout banner design by Air Geronimo" loading="lazy" />
+        </a>
+        <div class="ws-note">
+          <strong>Christmas Campaign Website</strong><br/>
+          Dark, moody aesthetic to match Orion's brand. The landing page is a full-scroll experience — click either image to see the complete design.
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function adGrid(assets, cols, title = "", kind = "") {
@@ -1078,7 +1102,19 @@ function renderCategory(category) {
       </div>
       ${category.projects
         .map(
-          (project) => project.orionAds ? (project.stackLayout ? `
+          (project) => project.websiteShowcase ? `
+            <article class="project-block project-block--full">
+              <div class="project-copy-full">
+                <div class="project-kind-row">
+                  <span class="project-kind">${project.kind}</span>
+                </div>
+                <h3>${project.title}</h3>
+                <p>${project.text}</p>
+                ${project.tools ? `<p class="project-tools"><span>Tools:</span> ${project.tools}</p>` : ""}
+              </div>
+              ${websiteShowcase(project.websiteShowcase.tall, project.websiteShowcase.wide, project.title)}
+            </article>
+          ` : project.orionAds ? (project.stackLayout ? `
             <article class="project-block project-block--full">
               <div class="project-copy-full">
                 <div class="project-kind-row">

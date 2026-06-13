@@ -2238,6 +2238,132 @@ body.reveal-ready [data-reveal].is-visible {
   }
 }
 
+/* ── Website Showcase Layout ──────────────────────────────────────── */
+.ws-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.ws-tall-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(246, 240, 217, 0.14);
+  background: #06060e;
+  max-height: 540px;
+  transition: border-color 220ms ease;
+}
+
+.ws-tall-wrap img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  max-height: 540px;
+  transition: transform 500ms ease;
+}
+
+.ws-tall-wrap:hover img {
+  transform: scale(1.015);
+}
+
+.ws-tall-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background: linear-gradient(transparent, rgba(6, 6, 14, 0.95));
+  border-radius: 0 0 14px 14px;
+  pointer-events: none;
+}
+
+.ws-tall-wrap:hover {
+  border-color: rgba(255, 199, 96, 0.45);
+}
+
+.ws-tall-label {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 199, 96, 0.12);
+  border: 1px solid rgba(255, 199, 96, 0.35);
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.ws-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ws-wide-wrap {
+  display: block;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(246, 240, 217, 0.14);
+  background: #06060e;
+  transition: border-color 220ms ease;
+}
+
+.ws-wide-wrap img {
+  width: 100%;
+  display: block;
+  transition: transform 500ms ease;
+}
+
+.ws-wide-wrap:hover {
+  border-color: rgba(255, 199, 96, 0.45);
+}
+
+.ws-wide-wrap:hover img {
+  transform: scale(1.015);
+}
+
+.ws-note {
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(246, 240, 217, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(246, 240, 217, 0.58);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.ws-note strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .ws-showcase {
+    grid-template-columns: 1fr;
+  }
+  .ws-tall-wrap,
+  .ws-tall-wrap img {
+    max-height: 400px;
+  }
+}
+
 /* ── Lightbox ─────────────────────────────────────────────────────── */
 .lb {
   position: fixed;
