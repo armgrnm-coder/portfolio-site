@@ -528,6 +528,22 @@ const categories = [
         adCols: 2
       },
       {
+        title: "India, UK & Pakistan — Orion Sign-Up Carousel",
+        kind: "Performance marketing",
+        label: "Meta Ads Creative",
+        tools: "Figma · Photoshop",
+        text:
+          "A 5-slide Meta carousel campaign targeting audiences across India, UK, and Pakistan — built to drive sign-ups to Orion Funded by leading with the platform's key selling points: no Quickstrike penalties, bi-weekly payouts, 80% profit split from day one, and a single one-time payment. Each slide escalates the value proposition, closing with the brand CTA.",
+        orionAds: [
+          "orion-carousel-india-uk-pk-01.jpg",
+          "orion-carousel-india-uk-pk-02.jpg",
+          "orion-carousel-india-uk-pk-03.jpg",
+          "orion-carousel-india-uk-pk-04.jpg",
+          "orion-carousel-india-uk-pk-05.jpg"
+        ],
+        adCols: 3
+      },
+      {
         title: "Meta Ads and Paid Media Creative",
         kind: "Performance marketing",
         label: "Meta Ads and Paid Media Creative",
