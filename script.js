@@ -207,6 +207,14 @@ const categories = [
         containImage: true
       },
       {
+        title: "Creative Branding & Marketing Presentation",
+        kind: "Brand identity & presentation design",
+        text:
+          "A full creative branding and marketing presentation developed for \"Hidden Letters of the Heart\" — a poetry book by Colette. Covers visual identity, mood direction, typography, and marketing strategy, built to communicate the book's intimate, nostalgic tone to publishers and collaborators.",
+        assets: ["hidden-letters-branding.png"],
+        containImage: true
+      },
+      {
         title: "Teleperformance Academy Campaign",
         kind: "Digital advertising & brand collateral",
         text:
