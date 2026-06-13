@@ -194,7 +194,8 @@ const categories = [
         kind: "Print design & brand collateral",
         text:
           "A trifold brochure designed for Ming's Dim Sum, a startup restaurant client. Warm, inviting layout with a focus on appetite appeal — balancing photography, menu highlights, and brand personality in a compact, shareable format.",
-        assets: ["mings-dim-sum-brochure.png"]
+        assets: ["mings-dim-sum-brochure.png"],
+        containImage: true
       },
       {
         title: "Teleperformance Academy Campaign",
@@ -678,14 +679,14 @@ function adGrid(assets, cols) {
   `;
 }
 
-function imageMosaic(assets, limit = 12) {
+function imageMosaic(assets, limit = 12, containImage = false) {
   return `
     <div class="image-mosaic">
       ${assets
         .slice(0, limit)
         .map(
           (asset) => `
-            <a class="art-tile" href="${img(asset)}" target="_blank" rel="noreferrer">
+            <a class="art-tile${containImage ? " art-tile--contain" : ""}" href="${img(asset)}" target="_blank" rel="noreferrer">
               <img src="${img(asset)}" alt="" loading="lazy" />
             </a>
           `
@@ -1027,7 +1028,7 @@ function renderCategory(category) {
                 ${project.tools ? `<p class="project-tools"><span>Tools:</span> ${project.tools}</p>` : ""}
                 ${project.link ? `<a class="text-link" href="${project.link}" target="_blank" rel="noreferrer">See the post →</a>` : ""}
               </div>
-              ${imageMosaic(project.assets, 18)}
+              ${imageMosaic(project.assets, 18, project.containImage)}
             </article>
           `
         )
