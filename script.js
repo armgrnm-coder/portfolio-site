@@ -897,6 +897,10 @@ function renderAbout() {
               got pulled into content, strategy, and performance marketing. My background is all over
               the place — and that's turned out to be an advantage.
             </p>
+            <p class="lede" style="margin-top:1rem;">
+              If you look into my works, I didn't graduate as a Multimedia Artist for nothing
+              (had to make sure that tuition really went somewhere).
+            </p>
             <div class="hero-actions" style="margin-top:2rem;">
               <a class="button primary" href="#work">See the work</a>
               <a class="button" href="#contact">Get in touch</a>
