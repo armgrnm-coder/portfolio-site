@@ -1100,6 +1100,13 @@ function renderExperience() {
           <ul class="tournament-list">
             ${tournaments.map((item) => `<li>${item}</li>`).join("")}
           </ul>
+          <div class="tournament-gallery">
+            ${["tournament-01.jpg","tournament-02.jpg","tournament-03.jpg","tournament-04.jpg"].map(f => `
+              <a class="tournament-photo" href="${img(f)}" target="_blank" rel="noreferrer">
+                <img src="${img(f)}" alt="Tournament event photo" loading="lazy" />
+              </a>
+            `).join("")}
+          </div>
         </div>
       </section>
     </article>

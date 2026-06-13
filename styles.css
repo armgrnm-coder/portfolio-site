@@ -1937,6 +1937,32 @@ h1,
   padding-left: 1.2rem;
 }
 
+.tournament-gallery {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.tournament-photo {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 4/3;
+}
+
+.tournament-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.tournament-photo:hover img {
+  transform: scale(1.05);
+}
+
 .service-section-head {
   margin-bottom: 1.2rem;
 }
