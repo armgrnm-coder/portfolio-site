@@ -1266,3 +1266,90 @@ function observeReveals() {
 
 window.addEventListener("hashchange", route);
 route();
+
+/* ── Lightbox ─────────────────────────────────────────────────────── */
+(function () {
+  const lb = document.createElement("div");
+  lb.id = "lb";
+  lb.className = "lb";
+  lb.setAttribute("role", "dialog");
+  lb.setAttribute("aria-modal", "true");
+  lb.setAttribute("aria-label", "Image viewer");
+  lb.hidden = true;
+  lb.innerHTML = `
+    <div class="lb-backdrop"></div>
+    <button class="lb-close" aria-label="Close">✕</button>
+    <button class="lb-prev" aria-label="Previous image">‹</button>
+    <button class="lb-next" aria-label="Next image">›</button>
+    <div class="lb-stage">
+      <img class="lb-img" src="" alt="" />
+    </div>
+    <div class="lb-counter"></div>
+  `;
+  document.body.appendChild(lb);
+
+  const lbImg = lb.querySelector(".lb-img");
+  const lbCounter = lb.querySelector(".lb-counter");
+  const lbPrev = lb.querySelector(".lb-prev");
+  const lbNext = lb.querySelector(".lb-next");
+
+  let images = [];
+  let current = 0;
+
+  function open(tiles, index) {
+    images = Array.from(tiles).map((a) => a.href);
+    current = index;
+    show();
+    lb.hidden = false;
+    document.body.style.overflow = "hidden";
+    lb.querySelector(".lb-close").focus();
+  }
+
+  function show() {
+    lbImg.style.opacity = "0";
+    lbImg.src = images[current];
+    lbImg.onload = () => { lbImg.style.opacity = "1"; };
+    lbCounter.textContent = `${current + 1} / ${images.length}`;
+    lbPrev.style.visibility = images.length > 1 ? "visible" : "hidden";
+    lbNext.style.visibility = images.length > 1 ? "visible" : "hidden";
+  }
+
+  function close() {
+    lb.hidden = true;
+    document.body.style.overflow = "";
+    images = [];
+  }
+
+  function prev() { current = (current - 1 + images.length) % images.length; show(); }
+  function next() { current = (current + 1) % images.length; show(); }
+
+  lb.querySelector(".lb-close").addEventListener("click", close);
+  lb.querySelector(".lb-backdrop").addEventListener("click", close);
+  lbPrev.addEventListener("click", prev);
+  lbNext.addEventListener("click", next);
+
+  document.addEventListener("keydown", (e) => {
+    if (lb.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") prev();
+    if (e.key === "ArrowRight") next();
+  });
+
+  document.addEventListener("click", (e) => {
+    const tile = e.target.closest(".art-tile, .ad-tile");
+    if (!tile) return;
+    e.preventDefault();
+    const parent = tile.closest(".image-mosaic, .ad-grid");
+    const tiles = parent ? parent.querySelectorAll(".art-tile, .ad-tile") : [tile];
+    const index = Array.from(tiles).indexOf(tile);
+    open(tiles, index);
+  });
+
+  /* Touch swipe */
+  let touchStartX = 0;
+  lb.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+  });
+})();
