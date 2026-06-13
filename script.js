@@ -212,7 +212,9 @@ const categories = [
         text:
           "A full creative branding and marketing presentation developed for \"Hidden Letters of the Heart\" — a poetry book by Colette. Covers visual identity, mood direction, typography, and marketing strategy, built to communicate the book's intimate, nostalgic tone to publishers and collaborators.",
         assets: ["hidden-letters-branding.png"],
-        containImage: true
+        containImage: true,
+        link: "https://drive.google.com/file/d/155Xx5h0u3fWd42jJ605JPzlwc3S8xPU2/view?usp=sharing",
+        linkLabel: "Read the full presentation →"
       },
       {
         title: "Teleperformance Academy Campaign",
@@ -1043,7 +1045,7 @@ function renderCategory(category) {
                 <h3>${project.title}</h3>
                 <p>${project.text}</p>
                 ${project.tools ? `<p class="project-tools"><span>Tools:</span> ${project.tools}</p>` : ""}
-                ${project.link ? `<a class="text-link" href="${project.link}" target="_blank" rel="noreferrer">See the post →</a>` : ""}
+                ${project.link ? `<a class="${project.linkLabel ? 'btn-outline' : 'text-link'}" href="${project.link}" target="_blank" rel="noreferrer">${project.linkLabel || "See the post →"}</a>` : ""}
               </div>
               ${imageMosaic(project.assets, 18, project.containImage)}
             </article>
