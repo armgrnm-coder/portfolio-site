@@ -190,6 +190,15 @@ const categories = [
         ]
       },
       {
+        title: "Filipinnovation Training Module Kit",
+        kind: "Editorial & print design",
+        text:
+          "A 67-page Training Module Kit produced for the 2025 Presidential Filipinnovation Awards — a government-backed startup mentoring and bootcamp program. Covers strategic partnerships, IP & regulatory compliance, business model canvas, and innovation frameworks. Designed in InDesign for wide distribution to startup founders and innovators across the Philippines.",
+        tools: "Adobe InDesign",
+        assets: ["filipinnovation-training-module-kit.png"],
+        containImage: true
+      },
+      {
         title: "Ming's Dim Sum Brochure",
         kind: "Print design & brand collateral",
         text:
