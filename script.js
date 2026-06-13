@@ -195,11 +195,11 @@ const categories = [
         text:
           "End-to-end visual design for the 2025 Presidential Filipinnovation Awards — a national government event celebrating Filipino innovation. Deliverables included backwall booth designs for each finalist company, pull-up banners for venue activation, a rosette lei worn by VIP guests and winners, gift tags for award packages, and stage backdrop design. Every piece maintained the bold, patriotic visual identity of the program.",
         assets: [
-          "filipinno-backwall.png",
           "filipinno-stage.png",
-          "filipinno-rosette-gifttag.png",
-          "filipinno-gift-tag.jpg",
-          "filipinno-pullup-banners.png"
+          "filipinno-backwall.png",
+          "filipinno-rosette.png",
+          "filipinno-gift-tag.png",
+          { file: "filipinno-pullup-banners.png", contain: true }
         ]
       },
       {
@@ -717,11 +717,15 @@ function imageMosaic(assets, limit = 12, containImage = false) {
       ${assets
         .slice(0, limit)
         .map(
-          (asset) => `
-            <a class="art-tile${containImage ? " art-tile--contain" : ""}" href="${img(asset)}" target="_blank" rel="noreferrer">
-              <img src="${img(asset)}" alt="" loading="lazy" />
-            </a>
-          `
+          (asset) => {
+            const file = typeof asset === "object" ? asset.file : asset;
+            const contain = containImage || (typeof asset === "object" && asset.contain);
+            return `
+              <a class="art-tile${contain ? " art-tile--contain" : ""}" href="${img(file)}" target="_blank" rel="noreferrer">
+                <img src="${img(file)}" alt="" loading="lazy" />
+              </a>
+            `;
+          }
         )
         .join("")}
     </div>
