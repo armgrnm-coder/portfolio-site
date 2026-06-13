@@ -197,6 +197,13 @@ const categories = [
         assets: ["mings-dim-sum-brochure.png"]
       },
       {
+        title: "Teleperformance Academy Campaign",
+        kind: "Digital advertising & brand collateral",
+        text:
+          "Two ad creatives designed for Teleperformance's Analytics Academy — a data science training program. Bold, energetic visuals with strong CTAs, designed to attract working professionals and drive enrollment.",
+        assets: ["teleperformance-1.jpg", "teleperformance-2.jpg"]
+      },
+      {
         title: "Story of Seasons Editorial Layout",
         kind: "Editorial & print design",
         text:
