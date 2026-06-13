@@ -190,6 +190,13 @@ const categories = [
         ]
       },
       {
+        title: "Ming's Dim Sum Brochure",
+        kind: "Print design & brand collateral",
+        text:
+          "A trifold brochure designed for Ming's Dim Sum, a startup restaurant client. Warm, inviting layout with a focus on appetite appeal — balancing photography, menu highlights, and brand personality in a compact, shareable format.",
+        assets: ["mings-dim-sum-brochure.png"]
+      },
+      {
         title: "Story of Seasons Editorial Layout",
         kind: "Editorial & print design",
         text:
