@@ -1814,7 +1814,7 @@ h1,
   border-radius: 12px;
 }
 
-.image-mosaic:has(.art-tile--contain) {
+.image-mosaic--contain {
   display: block;
 }
 

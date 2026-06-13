@@ -713,7 +713,7 @@ function adGrid(assets, cols) {
 
 function imageMosaic(assets, limit = 12, containImage = false) {
   return `
-    <div class="image-mosaic">
+    <div class="image-mosaic${containImage ? " image-mosaic--contain" : ""}">
       ${assets
         .slice(0, limit)
         .map(
