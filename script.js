@@ -573,14 +573,24 @@ const categories = [
     id: "affiliate-flyers",
     title: "Affiliate Flyers & Posters",
     deck: "Offer-led posters and promotional layouts for affiliate campaigns and product pushes.",
-    cover: img("p17-02-640x640.jpg"),
+    cover: img("affiliate-alekaydrift-drift-generic.jpg"),
     projects: [
       {
-        title: "Offer-Led Promo Layouts",
+        title: "Affiliate Campaign Posters",
         kind: "Affiliate and promotional design",
         text:
-          "Affiliate and promotional flyers built around the offer, the benefit, and the next step. Currently showing archive work while newer affiliate samples come through.",
-        assets: ["p17-02-640x640.jpg", "p17-03-640x640.jpg", "p19-02-640x640.jpg", "p20-02-640x640.jpg", "p25-04-565x800.jpg"]
+          "Offer-led flyers and posters for affiliate campaigns — bilingual English-Spanish copy, referral hooks, giveaway mechanics, and product launch promotions. Built to convert across social media and community channels.",
+        assets: [
+          "affiliate-alekaydrift-drift-generic.jpg",
+          "affiliate-drift-generic-belike.jpg",
+          "affiliate-giveaway-ren-spanish.jpg",
+          "affiliate-macdrop-flyer.jpg",
+          "affiliate-macdrop-alekay-flyer.jpg",
+          "affiliate-trading-floor-refer-spanish.jpg",
+          "affiliate-promo-especial.jpg",
+          "affiliate-dcm-giveaway.jpg",
+          "affiliate-sorteo-macbook-air.jpg"
+        ]
       }
     ]
   },
@@ -639,7 +649,7 @@ const categories = [
     id: "ui-ux",
     title: "UI/UX Website Design",
     deck: "Website visuals, landing page hierarchy, campaign sections, and conversion-led layouts.",
-    cover: img("orion-xmas-landing.jpg"),
+    cover: img("checkout-banner-phone.jpg"),
     projects: [
       {
         title: "Orion Mega Giveaway — Christmas Campaign",
