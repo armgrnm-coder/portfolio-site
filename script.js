@@ -580,7 +580,7 @@ const categories = [
     id: "youtube-thumbnails",
     title: "YouTube Thumbnails",
     deck: "CTR-focused thumbnail systems for finance, trading, and educational video content.",
-    cover: img("p25-02-720x412.jpg"),
+    cover: img("yt-cover-guerra-oriente.jpg"),
     projects: [
       {
         title: "CTR-Focused Thumbnail Direction",
