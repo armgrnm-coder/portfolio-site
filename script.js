@@ -587,7 +587,19 @@ const categories = [
         kind: "YouTube creative",
         text:
           "Fast readability, strong focal points, clear emotional hook. Current work includes finance, trading, and market update content — public samples to be added when cleared.",
-        assets: ["p25-02-720x412.png", "p25-03-720x412.png", "p40-03-1280x720.jpg", "p28-02-1280x720.jpg"]
+        assets: [
+          "yt-monday-update-02-09-26.jpg",
+          "yt-thumbnail-03-02-26.jpg",
+          "yt-ama-session-v6.jpg",
+          "yt-monday-update-03-16-26.jpg",
+          "yt-monday-update-03-30-26.jpg",
+          "yt-monday-update-04-13-26.jpg",
+          "yt-webinar-01-28-26.jpg",
+          "yt-podcast-umar-punjabi.jpg",
+          "yt-podcast-daniel-homes.jpg",
+          "yt-podcast-maya-yatanska.jpg",
+          "yt-sunday-03-08-26.jpg"
+        ]
       }
     ]
   },
