@@ -167,7 +167,7 @@ const categories = [
     id: "graphic-design",
     title: "Graphic Design",
     deck: "Logos, editorial layouts, posters, infographics, banners, and campaign graphics.",
-    cover: img("p06-02-2134x1365.png"),
+    cover: img("graphic-design-cover.png"),
     projects: [
       {
         title: "Logo Collection",
