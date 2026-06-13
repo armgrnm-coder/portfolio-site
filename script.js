@@ -539,7 +539,18 @@ const categories = [
           "orion-carousel-india-uk-pk-02.jpg",
           "orion-carousel-india-uk-pk-03.jpg",
           "orion-carousel-india-uk-pk-04.jpg",
-          "orion-carousel-india-uk-pk-05.jpg",
+          "orion-carousel-india-uk-pk-05.jpg"
+        ],
+        adCols: 2
+      },
+      {
+        title: "India, UK & Pakistan — Individual Ad Creatives",
+        kind: "Performance marketing",
+        label: "Meta Ads Creative",
+        tools: "Figma · Photoshop",
+        text:
+          "Standalone ad creatives targeting India, UK, and Pakistan audiences — each built around a distinct angle: trust, accessibility, value comparison, and a direct first-step CTA.",
+        orionAds: [
           "orion-ad-india-uk-pk-main12.jpg",
           "orion-ad-india-uk-pk-v1.jpg",
           "orion-ad-india-uk-pk-v3.jpg",
