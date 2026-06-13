@@ -1797,13 +1797,25 @@ h1,
 
 .art-tile--contain {
   min-height: unset;
-  background: rgba(246, 240, 217, 0.04);
+  height: auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .art-tile--contain img {
+  width: 100%;
   height: auto;
   min-height: unset;
   object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+.image-mosaic:has(.art-tile--contain) {
+  display: block;
 }
 
 .art-tile:hover,
