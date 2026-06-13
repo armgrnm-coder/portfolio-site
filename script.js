@@ -533,7 +533,7 @@ const categories = [
         label: "Meta Ads Creative",
         tools: "Figma · Photoshop",
         text:
-          "A 5-slide Meta carousel campaign targeting audiences across India, UK, and Pakistan — built to drive sign-ups to Orion Funded by leading with the platform's key selling points: no Quickstrike penalties, bi-weekly payouts, 80% profit split from day one, and a single one-time payment. Each slide escalates the value proposition, closing with the brand CTA.",
+          "Meta carousel and individual ad creatives targeting audiences across India, UK, and Pakistan — designed to drive Orion Funded sign-ups with direct-response copy and platform benefit hooks.",
         orionAds: [
           "orion-carousel-india-uk-pk-01.jpg",
           "orion-carousel-india-uk-pk-02.jpg",
@@ -546,7 +546,7 @@ const categories = [
           "orion-ad-india-uk-pk-v8.jpg",
           "orion-ad-india-uk-pk-09v1.jpg"
         ],
-        adCols: 3
+        adCols: 2
       },
       {
         title: "Meta Ads and Paid Media Creative",
