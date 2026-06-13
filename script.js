@@ -539,7 +539,12 @@ const categories = [
           "orion-carousel-india-uk-pk-02.jpg",
           "orion-carousel-india-uk-pk-03.jpg",
           "orion-carousel-india-uk-pk-04.jpg",
-          "orion-carousel-india-uk-pk-05.jpg"
+          "orion-carousel-india-uk-pk-05.jpg",
+          "orion-ad-india-uk-pk-main12.jpg",
+          "orion-ad-india-uk-pk-v1.jpg",
+          "orion-ad-india-uk-pk-v3.jpg",
+          "orion-ad-india-uk-pk-v8.jpg",
+          "orion-ad-india-uk-pk-09v1.jpg"
         ],
         adCols: 3
       },
