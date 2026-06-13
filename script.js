@@ -190,6 +190,19 @@ const categories = [
         ]
       },
       {
+        title: "Filipinnovation Awards 2025 — Event Design Suite",
+        kind: "Event design & brand collateral",
+        text:
+          "End-to-end visual design for the 2025 Presidential Filipinnovation Awards — a national government event celebrating Filipino innovation. Deliverables included backwall booth designs for each finalist company, pull-up banners for venue activation, a rosette lei worn by VIP guests and winners, gift tags for award packages, and stage backdrop design. Every piece maintained the bold, patriotic visual identity of the program.",
+        assets: [
+          "filipinno-backwall.png",
+          "filipinno-stage.png",
+          "filipinno-rosette-gifttag.png",
+          "filipinno-gift-tag.jpg",
+          "filipinno-pullup-banners.png"
+        ]
+      },
+      {
         title: "Filipinnovation Training Module Kit",
         kind: "Editorial & print design",
         text:
