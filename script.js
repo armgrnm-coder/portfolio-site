@@ -66,6 +66,9 @@ const skills = {
     "Meta Ads Manager",
     "OBS Studio / Streamlabs",
     "Trello / Notion / Monday.com",
+    "Mailchimp / Klaviyo",
+    "Wix",
+    "Buffer / Publer / SocialPilot",
     "ChatGPT, Gemini, Claude, Firefly, Google Flow"
   ],
   strengths: [
