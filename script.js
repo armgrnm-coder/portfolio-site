@@ -730,10 +730,22 @@ function icon(name) {
 }
 
 function setPage(html) {
-  app.innerHTML = html;
-  app.focus({ preventScroll: true });
-  requestAnimationFrame(() => document.body.classList.add("reveal-ready"));
-  observeReveals();
+  const prev = app.querySelector(".page");
+  const doSet = () => {
+    app.innerHTML = html;
+    app.focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: "instant" });
+    requestAnimationFrame(() => document.body.classList.add("reveal-ready"));
+    observeReveals();
+  };
+  if (prev) {
+    let fired = false;
+    const finish = () => { if (fired) return; fired = true; doSet(); };
+    prev.classList.add("page-exit");
+    setTimeout(finish, 270);
+  } else {
+    doSet();
+  }
 }
 
 function route() {
@@ -840,7 +852,7 @@ function renderHome() {
       </section>
 
       <section class="hero-v2">
-        <div class="hero-copy-v2" data-reveal>
+        <div class="hero-copy-v2" data-reveal style="transition-delay:80ms">
           <h1>Making things<br /><em>worth looking at.</em></h1>
           <p>
             I'm Air — graphic designer, illustrator, content strategist, and accidental
@@ -852,7 +864,7 @@ function renderHome() {
             <a class="button" href="#about">About me</a>
           </div>
         </div>
-        <div class="hero-gallery-wrap" data-reveal>
+        <div class="hero-gallery-wrap" data-reveal style="transition-delay:260ms">
           <p class="hero-gallery-label">Selected work</p>
           <div class="hero-slideshow" id="heroSlideshow">
             ${[
@@ -957,7 +969,7 @@ function renderAbout() {
     <article class="page">
       <section class="section top-section">
         <div class="about-layout">
-          <div data-reveal>
+          <div data-reveal="left">
             <p class="eyebrow">About</p>
             <h1 class="page-title">I make things.<br />Then I make them better.</h1>
             <p class="lede">
@@ -979,14 +991,14 @@ function renderAbout() {
               <a class="button" href="#contact">Get in touch</a>
             </div>
           </div>
-          <div class="portrait-card" data-reveal>
+          <div class="portrait-card" data-reveal="right">
             <img src="${img("p02-03-600x800.jpg")}" alt="Air Mae Geronimo" />
           </div>
         </div>
       </section>
 
       <section class="section compact">
-        <div class="about-panels" data-reveal>
+        <div class="about-panels" data-reveal style="transition-delay:60ms">
           <div class="about-panel">
             <h3>What I do</h3>
             <p>
@@ -1033,15 +1045,15 @@ function renderAbout() {
 function renderSkills() {
   return `
     <div class="skills-grid">
-      <div class="skill-block" data-reveal>
+      <div class="skill-block" data-reveal style="transition-delay:0ms">
         <h3>Creative</h3>
         ${skills.creative.map((skill) => `<span class="pill">${skill}</span>`).join("")}
       </div>
-      <div class="skill-block" data-reveal>
+      <div class="skill-block" data-reveal style="transition-delay:100ms">
         <h3>Technical</h3>
         ${skills.technical.map((skill) => `<span class="pill">${skill}</span>`).join("")}
       </div>
-      <div class="skill-block" data-reveal>
+      <div class="skill-block" data-reveal style="transition-delay:200ms">
         <h3>Strengths</h3>
         ${skills.strengths.map((skill) => `<span class="pill">${skill}</span>`).join("")}
       </div>
@@ -1241,7 +1253,7 @@ function renderContact() {
     <article class="page">
       <section class="section top-section">
         <div class="contact-hero">
-          <div data-reveal>
+          <div data-reveal="left">
             <p class="eyebrow">Get in touch</p>
             <h1 class="page-title">Tell me what you're building.</h1>
             <p class="lede">
@@ -1253,7 +1265,7 @@ function renderContact() {
               it'll draft an email with your details already filled in.
             </p>
           </div>
-          <div class="panel paper contact-details" data-reveal>
+          <div class="panel paper contact-details" data-reveal="right" style="transition-delay:150ms">
             <a class="contact-link icon-link" href="${links.email}"><span>${icon("email")} Email</span><span>armgrnm@gmail.com</span></a>
             <a class="contact-link icon-link" href="tel:+639997827445"><span>${icon("phone")} Phone</span><span>+63 999 782 7445</span></a>
             <a class="contact-link icon-link" href="https://wa.me/639997827445" target="_blank" rel="noreferrer"><span>${icon("chat")} WhatsApp / Viber</span><span>+63 999 782 7445</span></a>
