@@ -1357,7 +1357,12 @@ function observeReveals() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          entry.target.classList.remove("reveal-up");
+          entry.target.dataset.wasVisible = "1";
+        } else if (entry.target.dataset.wasVisible) {
+          const aboveViewport = entry.boundingClientRect.top < (entry.rootBounds ? entry.rootBounds.top : 0);
+          entry.target.classList.toggle("reveal-up", aboveViewport);
+          entry.target.classList.remove("is-visible");
         }
       });
     },

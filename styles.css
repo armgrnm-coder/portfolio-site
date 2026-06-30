@@ -679,6 +679,18 @@ h1,
   transform: none;
 }
 
+[data-reveal].reveal-up {
+  transform: translateY(-24px);
+}
+
+[data-reveal="left"].reveal-up {
+  transform: translateX(-40px);
+}
+
+[data-reveal="right"].reveal-up {
+  transform: translateX(40px);
+}
+
 @keyframes pageIn {
   from {
     opacity: 0;
