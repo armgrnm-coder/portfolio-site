@@ -852,7 +852,7 @@ function renderHome() {
       </section>
 
       <section class="hero-v2">
-        <div class="hero-copy-v2" data-reveal style="transition-delay:80ms">
+        <div class="hero-copy-v2" data-reveal style="transition-delay:1100ms">
           <h1>Making things<br /><em>worth looking at.</em></h1>
           <p>
             I'm Air — graphic designer, illustrator, content strategist, and accidental
@@ -864,7 +864,7 @@ function renderHome() {
             <a class="button" href="#about">About me</a>
           </div>
         </div>
-        <div class="hero-gallery-wrap" data-reveal style="transition-delay:260ms">
+        <div class="hero-gallery-wrap" data-reveal style="transition-delay:1400ms">
           <p class="hero-gallery-label">Selected work</p>
           <div class="hero-slideshow" id="heroSlideshow">
             ${[
