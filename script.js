@@ -835,6 +835,7 @@ function renderHome() {
 
       <section class="portfolio-banner">
         <div class="banner-grain" aria-hidden="true"></div>
+        <p class="banner-welcome">Welcome to my</p>
         <div class="banner-inner">
           <div class="banner-ring" aria-hidden="true">
             <svg viewBox="0 0 1000 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
@@ -842,7 +843,6 @@ function renderHome() {
               <ellipse cx="500" cy="110" rx="448" ry="80" fill="none" stroke="rgba(246,240,217,0.22)" stroke-width="0.8"/>
             </svg>
           </div>
-          <p class="banner-welcome">Welcome to my</p>
           <h2 class="banner-title">Portfolio</h2>
           <span class="sparkle sp-1" aria-hidden="true">✦</span>
           <span class="sparkle sp-2" aria-hidden="true">✦</span>
