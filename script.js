@@ -759,6 +759,7 @@ const blogPosts = [
     teaser: "I almost scrolled past it. But the first sentence snagged on something, and by the time the Reel ended I was sitting very still with a belief I'd carried most of my life, noticing it felt a lot less solid than it had a minute earlier.",
     linkedinUrl: "https://www.linkedin.com/pulse/maybe-matter-what-problem-airie-mae-geronimo-qzyoc",
     readingTime: 7,
+    cover: "blog-cover-no-matter-what.jpg",
     content: `
       <blockquote class="blog-pullquote">We're taught that the purest form of love survives anything. I'm starting to wonder whether that's love at all, or whether some things should be allowed to change what we're willing to accept.</blockquote>
       <p>I almost scrolled past it. My thumb was already mid-flick, the way it gets late in the evening when the phone is the only light in the room, and I'd have lost the Reel in another second if the first sentence hadn't snagged on something. By the time it ended I'd stopped moving altogether, sitting very still with a belief I'd carried most of my life and noticing that it felt a lot less solid than it had a minute earlier.</p>
@@ -835,18 +836,21 @@ function renderBlog(detail) {
 
   const allTags = ["all", "creativity", "identity", "ambition", "relationships"];
   const cards = blogPosts.map((post, i) => `
-    <article class="blog-card" data-tags="${post.tags.join(" ")}" data-reveal style="transition-delay:${i * 90}ms">
+    <article class="blog-card${post.cover ? " blog-card--has-cover" : ""}" data-tags="${post.tags.join(" ")}" data-reveal style="transition-delay:${i * 90}ms">
       <a href="#blog/${post.slug}" class="blog-card-link">
-        <div class="blog-card-meta">
-          <span class="blog-card-date">${formatBlogDate(post.date)}</span>
-          <span>${post.readingTime} min read</span>
+        ${post.cover ? `<div class="blog-card-cover"><img src="${img(post.cover)}" alt="${post.title} cover" loading="lazy" /></div>` : ""}
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">${formatBlogDate(post.date)}</span>
+            <span>${post.readingTime} min read</span>
+          </div>
+          <h3 class="blog-card-title">${post.title}</h3>
+          <p class="blog-card-teaser">${post.teaser}</p>
+          <div class="blog-card-tags">
+            ${post.tags.map((t) => `<span class="blog-tag-pill">${t}</span>`).join("")}
+          </div>
+          <span class="blog-card-cta">Read more →</span>
         </div>
-        <h3 class="blog-card-title">${post.title}</h3>
-        <p class="blog-card-teaser">${post.teaser}</p>
-        <div class="blog-card-tags">
-          ${post.tags.map((t) => `<span class="blog-tag-pill">${t}</span>`).join("")}
-        </div>
-        <span class="blog-card-cta">Read more →</span>
       </a>
     </article>
   `).join("");
@@ -918,7 +922,8 @@ function renderBlogPost(post) {
           </div>
         </header>
 
-        <article class="blog-post-body" data-reveal style="transition-delay:160ms">
+        ${post.cover ? `<div class="blog-post-cover" data-reveal style="transition-delay:160ms"><img src="${img(post.cover)}" alt="${post.title} cover" /></div>` : ""}
+        <article class="blog-post-body" data-reveal style="transition-delay:${post.cover ? "240ms" : "160ms"}">
           ${post.content}
         </article>
 
