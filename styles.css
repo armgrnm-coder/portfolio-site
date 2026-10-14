@@ -2823,6 +2823,17 @@ body.reveal-ready [data-reveal].is-visible {
   margin-bottom: 0;
 }
 
+.blog-pullquote {
+  border-left: 3px solid var(--gold);
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 0 0.75rem 1.4rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+  line-height: 1.65;
+  color: rgba(246, 240, 217, 0.75);
+}
+
 .blog-post-footer {
   border-top: 1px solid var(--line);
   padding-top: 2rem;

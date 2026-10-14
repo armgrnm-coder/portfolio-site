@@ -752,19 +752,41 @@ function setPage(html) {
 
 const blogPosts = [
   {
-    slug: "the-unglamorous-middle",
-    title: "The Unglamorous Middle",
-    date: "2026-10-01",
-    tags: ["ambition", "identity"],
-    teaser: "Nobody tells you that becoming who you are supposed to be is a slow, unglamorous project. There are no montages. There is just Tuesday.",
-    linkedinUrl: "",
-    readingTime: 4,
+    slug: "maybe-no-matter-what-is-the-problem",
+    title: "Maybe \"No Matter What\" Is the Problem",
+    date: "2026-10-15",
+    tags: ["relationships", "identity"],
+    teaser: "I almost scrolled past it. But the first sentence snagged on something, and by the time the Reel ended I was sitting very still with a belief I'd carried most of my life, noticing it felt a lot less solid than it had a minute earlier.",
+    linkedinUrl: "https://www.linkedin.com/pulse/maybe-matter-what-problem-airie-mae-geronimo-qzyoc",
+    readingTime: 7,
     content: `
-      <p>Nobody tells you that becoming who you are supposed to be is a slow, unglamorous project. There are no montages. There is just Tuesday — and Tuesday looks like staring at a blank Figma file for 40 minutes before anything good comes through.</p>
-      <p>I've been thinking a lot about the middle. The part between starting something and being good at it. The part where you're too far in to quit but too raw to feel proud. Everyone wants to talk about the beginning (the dream, the spark) or the end (the portfolio, the job offer). Nobody talks about the middle, which is where most of us actually live.</p>
-      <p>There's a specific kind of loneliness in being mid-way. You're not a beginner anymore — you know too much for that comfort — but you're not an expert either. You're just in it. Working, revising, submitting, getting passed over, working again.</p>
-      <p>I think the unglamorous middle is actually where character gets built. Not in the big wins or the crushing losses — but in the ordinary discipline of showing up when nothing feels ready.</p>
-      <p>So if you're in the middle too: stay. It means something that you haven't left.</p>
+      <blockquote class="blog-pullquote">We're taught that the purest form of love survives anything. I'm starting to wonder whether that's love at all, or whether some things should be allowed to change what we're willing to accept.</blockquote>
+      <p>I almost scrolled past it. My thumb was already mid-flick, the way it gets late in the evening when the phone is the only light in the room, and I'd have lost the Reel in another second if the first sentence hadn't snagged on something. By the time it ended I'd stopped moving altogether, sitting very still with a belief I'd carried most of my life and noticing that it felt a lot less solid than it had a minute earlier.</p>
+      <p>The setup was simple. A man was complaining that his girlfriend expected him to contribute more to the cooking and cleaning, and since he worked long hours and couldn't always manage it, her expectations made the relationship feel conditional to him. If she really loved him, he asked, shouldn't she love him regardless?</p>
+      <p>The woman answering him didn't hesitate. Why, she wanted to know, should one adult expect another adult to love them without conditions? She went on to take apart the idea that women, children, and even pets receive some abundant, unconditional love that men are denied, and it fell apart faster than I expected. Women are expected to look a certain way, keep a home, stay desirable, stay agreeable.</p>
+      <p>Children get neglected. Animals get abandoned. Conditions are everywhere, she said, so the real question is what those conditions are.</p>
+      <p>There's a difference between expecting your partner to look like a celebrity and expecting them not to abandon your children. There's a difference between control and a boundary, between demanding perfection and expecting participation, between <em>you must become exactly who I want you to be</em> and <em>this is what I require in order to remain in this relationship.</em> Then she said the part that stuck. Children and animals are vulnerable, they depend on us, and their care shouldn't evaporate because they let an adult down.</p>
+      <p>But another grown adult? Why should adulthood come with the assumption that somebody will keep choosing us no matter how we treat them?</p>
+      <p>I felt that one in my bones, because I have always believed in unconditional love. I believed in it the way you believe in something you've built a personality around, with a kind of private pride. There was something beautiful to me about looking at another person and thinking, <em>there is nothing you could do that would make me stop loving you.</em> Part of me still believes it. But beliefs change when life starts asking you to test them.</p>
+      <p>Recently, I ended a relationship that had lasted almost two years, and breakups have an annoying habit of turning you into an archaeologist. You start digging through everything: the arguments, the compromises, the promises, the things you forgave, the things you told yourself weren't important, and every version of yourself that existed at some point along the way.</p>
+      <p>I realized I'm not the woman I was when it began. I'm not even the woman I was a year ago.</p>
+      <p>For a long time I'd been content to go with the flow, telling myself that eventually there would be more certainty, eventually there would be a plan, eventually I'd feel secure enough to stop wondering where everything was heading. Eventually turned into an exhausting word. Somewhere along the way I stopped wanting possibilities and started wanting something I could actually hold: security, consistency, maturity, a relationship that could talk about its future instead of postponing it indefinitely. That shift in me created conditions, and for a while I was uncomfortable admitting it.</p>
+      <p>Aren't conditions supposed to make love less pure? If I said <em>I need consistency from you,</em> was I threatening love? If I said <em>I need to know where this is going,</em> was I turning it into a transaction? If I said <em>I can't keep accepting this version of us,</em> did that mean I hadn't loved deeply enough?</p>
+      <p>I don't think so anymore.</p>
+      <p>I changed pieces of myself in that relationship because I thought love meant accommodation. Some of the changes were small. Others, looking back, were bigger than I'd admitted at the time. I changed how I looked, softened the edges of myself, made myself easier to accept, and convinced myself that patience was proof of love. I gave while I was struggling, stayed hopeful while I was tired, and kept believing that if I loved someone enough, patiently enough, generously enough, we'd eventually arrive at the same place. But love can't manufacture alignment where there isn't any, and loving someone doesn't mean negotiating against your own needs forever.</p>
+      <p>That may be the distinction I was missing all along: love can be unconditional while a relationship can't be.</p>
+      <p>I can love you and still require honesty from you. I can love you and expect effort, and need consistency, and want a future that doesn't live exclusively in vague promises. I can love you and decide the way we love each other no longer works for me. I can even love you while leaving. Those statements used to feel like contradictions. Now they feel like adulthood.</p>
+      <p>A relationship isn't made of love alone. It's two people continually deciding how they'll treat each other, and that takes responsibility, trust, communication, compatibility, and reciprocity. Those are conditions, and maybe we've given the word <em>conditional</em> an unfairly ugly meaning. A boundary is a condition. Respect is a condition. Fidelity can be one, and safety should be. Some behaviors should change how much access someone has to us, some choices should carry consequences, and some versions of love can only exist from a distance. None of that makes the love fake.</p>
+      <p>Maybe the trouble starts when we romanticize <em>no matter what.</em></p>
+      <p><em>"I'll stay no matter what, forgive no matter what, understand no matter what, wait no matter what."</em></p>
+      <p>It sounds devoted at first, but stretched far enough, <em>no matter what</em> asks us to remove ourselves from the equation entirely, and then what happens to our boundaries, our dignity, our plans, our capacity to grow?</p>
+      <p>The woman in the reel had a name for what the man was asking for: asymmetrical love. He wanted his needs to matter while resisting the expectations placed on him, and I haven't stopped thinking about that, because I suspect a lot of us aren't really asking for unconditional love when we use those words. Sometimes we're asking for immunity. We want to know somebody will keep choosing us whether or not we keep choosing them well. We want our shortcomings understood without ever having to face what they cost the other person. We want patience with no deadline, forgiveness with no repair, and presence with no responsibility attached.</p>
+      <p>That isn't a fair definition of love, and I don't think I want it anymore.</p>
+      <p>Of course, I still want a love that forgives, that makes room for mistakes, bad days, changing bodies, difficult seasons, fear, and every other imperfect thing that comes with being human. I don't want affection I have to earn through performance every day. But I also don't want to mistake acceptance for endurance. There should be things that make us reconsider whether a relationship is still healthy for us, standards for how we let ourselves be treated, and a point where loving someone no longer requires abandoning ourselves.</p>
+      <p>That's what changed for me.</p>
+      <p>I still believe love can be enormous, and that you can carry tenderness for someone long after the relationship ends. I still believe loving another person means seeing their flaws clearly and choosing compassion when you can. But I no longer believe the highest form of love is proving how much you can survive for someone. Sometimes love stays. Sometimes it forgives. Sometimes it waits. And sometimes it looks at someone it still loves and says, <em>I love you, but this is no longer enough for me to stay.</em></p>
+      <p>Maybe "no matter what" was never the promise we should've been making. Maybe the better one is this:</p>
+      <p><em>I will love you as fully as I can without disappearing from my own life to do it.</em></p>
     `
   },
   {
