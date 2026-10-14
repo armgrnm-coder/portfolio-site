@@ -748,6 +748,178 @@ function setPage(html) {
   }
 }
 
+// ─── Blog ──────────────────────────────────────────────────────────────────
+
+const blogPosts = [
+  {
+    slug: "the-unglamorous-middle",
+    title: "The Unglamorous Middle",
+    date: "2026-10-01",
+    tags: ["ambition", "identity"],
+    teaser: "Nobody tells you that becoming who you are supposed to be is a slow, unglamorous project. There are no montages. There is just Tuesday.",
+    linkedinUrl: "",
+    readingTime: 4,
+    content: `
+      <p>Nobody tells you that becoming who you are supposed to be is a slow, unglamorous project. There are no montages. There is just Tuesday — and Tuesday looks like staring at a blank Figma file for 40 minutes before anything good comes through.</p>
+      <p>I've been thinking a lot about the middle. The part between starting something and being good at it. The part where you're too far in to quit but too raw to feel proud. Everyone wants to talk about the beginning (the dream, the spark) or the end (the portfolio, the job offer). Nobody talks about the middle, which is where most of us actually live.</p>
+      <p>There's a specific kind of loneliness in being mid-way. You're not a beginner anymore — you know too much for that comfort — but you're not an expert either. You're just in it. Working, revising, submitting, getting passed over, working again.</p>
+      <p>I think the unglamorous middle is actually where character gets built. Not in the big wins or the crushing losses — but in the ordinary discipline of showing up when nothing feels ready.</p>
+      <p>So if you're in the middle too: stay. It means something that you haven't left.</p>
+    `
+  },
+  {
+    slug: "creative-guilt",
+    title: "Creative Guilt",
+    date: "2026-09-10",
+    tags: ["creativity"],
+    teaser: "There's a voice in every creative's head that sounds a lot like productivity guilt wearing a beret. It whispers while you scroll. It counts your output.",
+    linkedinUrl: "",
+    readingTime: 3,
+    content: `
+      <p>There's a voice in every creative's head that sounds a lot like productivity guilt wearing a beret. It whispers while you scroll. It counts your output. It compares your Tuesday against someone else's highlight reel and finds you lacking.</p>
+      <p>I spent a long time believing that the guilt was useful. That it meant I cared. That the discomfort was proof of ambition.</p>
+      <p>But creative guilt isn't ambition. It's ambition's anxious cousin who never actually makes anything.</p>
+      <p>The work I'm most proud of came from days when I turned the volume down on that voice and just made something — messily, without a plan, without comparing it to anything. The guilt wants perfect conditions. The work just needs you to start.</p>
+      <p>There's a difference between caring about quality and punishing yourself for not already having it. One builds the muscle. The other just makes the gym feel unsafe.</p>
+    `
+  },
+  {
+    slug: "what-i-learned-from-bad-briefs",
+    title: "What I Learned from Bad Briefs",
+    date: "2026-08-22",
+    tags: ["creativity", "ambition"],
+    teaser: "The worst briefs taught me more than the good ones. A tight, clear brief is a gift — but a vague one hands you a shovel and tells you to find the treasure yourself.",
+    linkedinUrl: "",
+    readingTime: 5,
+    content: `
+      <p>The worst briefs taught me more than the good ones. A tight, clear brief is a gift — but a vague one hands you a shovel and tells you to find the treasure yourself. I've gotten very good at finding the treasure.</p>
+      <p>Early in my career, I would sit with a bad brief and wait. Wait for more information, for clarity, for someone to tell me exactly what they wanted. I thought that's what professionalism looked like: staying in your lane until you're told to move.</p>
+      <p>What I learned is that the best designers don't wait for permission to have a point of view. They take the brief, fill in the blanks with informed assumptions, and present their reasoning. Nine times out of ten, the client hadn't fully thought it through either — and they're relieved that you did.</p>
+      <p>A bad brief is an opportunity to become the strategic partner instead of the service provider. The question isn't "what do you want?" It's "what are you actually trying to accomplish?"</p>
+      <p>Those are very different questions, and only one of them leads to work worth making.</p>
+    `
+  }
+];
+
+function formatBlogDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+}
+
+function renderBlog(detail) {
+  if (detail) {
+    const post = blogPosts.find((p) => p.slug === detail);
+    if (post) return renderBlogPost(post);
+  }
+
+  const allTags = ["all", "creativity", "identity", "ambition", "relationships"];
+  const cards = blogPosts.map((post, i) => `
+    <article class="blog-card" data-tags="${post.tags.join(" ")}" data-reveal style="transition-delay:${i * 90}ms">
+      <a href="#blog/${post.slug}" class="blog-card-link">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">${formatBlogDate(post.date)}</span>
+          <span>${post.readingTime} min read</span>
+        </div>
+        <h3 class="blog-card-title">${post.title}</h3>
+        <p class="blog-card-teaser">${post.teaser}</p>
+        <div class="blog-card-tags">
+          ${post.tags.map((t) => `<span class="blog-tag-pill">${t}</span>`).join("")}
+        </div>
+        <span class="blog-card-cta">Read more →</span>
+      </a>
+    </article>
+  `).join("");
+
+  setPage(`
+    <div class="page blog-page">
+      <section class="blog-hero">
+        <p class="blog-eyebrow" data-reveal>Aichwan's Archive</p>
+        <h1 class="blog-headline" data-reveal style="transition-delay:100ms">Words from the work.</h1>
+        <p class="blog-desc" data-reveal style="transition-delay:200ms">I write about creativity, identity, ambition, relationships, and the messy, human process of becoming.</p>
+        <div class="blog-subscribe-box" data-reveal style="transition-delay:320ms">
+          <p class="subscribe-label">Get new posts in your inbox.</p>
+          <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/aichwan" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/aichwan','popupwindow')">
+            <input type="hidden" name="tag" value="archive" />
+            <input type="email" name="email" placeholder="your@email.com" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <div class="blog-tags-bar" data-reveal style="transition-delay:400ms">
+        ${allTags.map((t) => `<button class="blog-tag-btn${t === "all" ? " active" : ""}" data-filter="${t}">${t.charAt(0).toUpperCase() + t.slice(1)}</button>`).join("")}
+      </div>
+
+      <div class="blog-grid" id="blog-grid">
+        ${cards}
+      </div>
+    </div>
+  `);
+
+  document.querySelectorAll(".blog-tag-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+      document.querySelectorAll(".blog-tag-btn").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      document.querySelectorAll(".blog-card").forEach((card) => {
+        const matches = filter === "all" || card.dataset.tags.includes(filter);
+        card.style.display = matches ? "" : "none";
+      });
+    });
+  });
+}
+
+function renderBlogPost(post) {
+  const idx = blogPosts.findIndex((p) => p.slug === post.slug);
+  const prev = idx > 0 ? blogPosts[idx - 1] : null;
+  const next = idx < blogPosts.length - 1 ? blogPosts[idx + 1] : null;
+
+  const postNav = `
+    <nav class="blog-post-nav">
+      ${prev ? `<a href="#blog/${prev.slug}" class="blog-nav-item blog-nav-prev"><span class="nav-dir">← Previous</span><span class="nav-title">${prev.title}</span></a>` : "<span></span>"}
+      ${next ? `<a href="#blog/${next.slug}" class="blog-nav-item blog-nav-next"><span class="nav-dir">Next →</span><span class="nav-title">${next.title}</span></a>` : "<span></span>"}
+    </nav>
+  `;
+
+  setPage(`
+    <div class="page blog-post-page">
+      <div class="blog-post-inner">
+        <a href="#blog" class="blog-back" data-reveal>← Back to Archive</a>
+        <header class="blog-post-header" data-reveal style="transition-delay:80ms">
+          <div class="blog-post-tags">
+            ${post.tags.map((t) => `<span class="blog-tag-pill">${t}</span>`).join("")}
+          </div>
+          <h1 class="blog-post-title">${post.title}</h1>
+          <div class="blog-post-meta">
+            <span>${formatBlogDate(post.date)}</span>
+            <span class="meta-dot">·</span>
+            <span>${post.readingTime} min read</span>
+          </div>
+        </header>
+
+        <article class="blog-post-body" data-reveal style="transition-delay:160ms">
+          ${post.content}
+        </article>
+
+        <footer class="blog-post-footer" data-reveal style="transition-delay:240ms">
+          ${post.linkedinUrl ? `<a href="${post.linkedinUrl}" target="_blank" rel="noreferrer" class="blog-linkedin-link">Read it on LinkedIn →</a>` : ""}
+          <div class="blog-subscribe-box">
+            <p class="subscribe-label">Enjoyed this? Join the archive.</p>
+            <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/aichwan" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/aichwan','popupwindow')">
+              <input type="hidden" name="tag" value="archive" />
+              <input type="email" name="email" placeholder="your@email.com" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </footer>
+
+        ${postNav}
+      </div>
+    </div>
+  `);
+}
+
+// ─── Router ────────────────────────────────────────────────────────────────
+
 function route() {
   const hash = window.location.hash.replace("#", "") || "home";
   const [name, detail] = hash.split("/");
@@ -757,6 +929,7 @@ function route() {
   if (name === "work") return renderWork(detail || "all");
   if (name === "experience") return renderExperience();
   if (name === "contact") return renderContact();
+  if (name === "blog") return renderBlog(detail);
   return renderHome();
 }
 
