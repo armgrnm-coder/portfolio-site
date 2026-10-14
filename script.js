@@ -837,7 +837,7 @@ function renderBlog(detail) {
         <p class="blog-desc" data-reveal style="transition-delay:200ms">I write about creativity, identity, ambition, relationships, and the messy, human process of becoming.</p>
         <div class="blog-subscribe-box" data-reveal style="transition-delay:320ms">
           <p class="subscribe-label">Get new posts in your inbox.</p>
-          <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/aichwan" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/aichwan','popupwindow')">
+          <form class="subscribe-form" action="https://buttondown.com/api/emails/embed-subscribe/aichwan" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/aichwan','popupwindow')">
             <input type="hidden" name="tag" value="archive" />
             <input type="email" name="email" placeholder="your@email.com" required />
             <button type="submit">Subscribe</button>
@@ -904,7 +904,7 @@ function renderBlogPost(post) {
           ${post.linkedinUrl ? `<a href="${post.linkedinUrl}" target="_blank" rel="noreferrer" class="blog-linkedin-link">Read it on LinkedIn →</a>` : ""}
           <div class="blog-subscribe-box">
             <p class="subscribe-label">Enjoyed this? Join the archive.</p>
-            <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/aichwan" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/aichwan','popupwindow')">
+            <form class="subscribe-form" action="https://buttondown.com/api/emails/embed-subscribe/aichwan" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/aichwan','popupwindow')">
               <input type="hidden" name="tag" value="archive" />
               <input type="email" name="email" placeholder="your@email.com" required />
               <button type="submit">Subscribe</button>
