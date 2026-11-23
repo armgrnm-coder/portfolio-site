@@ -947,10 +947,29 @@ function renderBlogPost(post) {
 
 // ─── Router ────────────────────────────────────────────────────────────────
 
+const pageTitles = {
+  home: "Air Geronimo | Graphic Designer & Multimedia Artist",
+  about: "About | Air Geronimo",
+  work: "Work | Air Geronimo",
+  experience: "Experience | Air Geronimo",
+  contact: "Contact | Air Geronimo",
+  blog: "Aichwan's Archive | Air Geronimo"
+};
+
 function route() {
   const hash = window.location.hash.replace("#", "") || "home";
   const [name, detail] = hash.split("/");
   updateNav(name);
+
+  if (name === "blog" && detail) {
+    const post = blogPosts.find((p) => p.slug === detail);
+    document.title = post
+      ? `${post.title} | Aichwan's Archive`
+      : pageTitles.blog;
+  } else {
+    document.title = pageTitles[name] || pageTitles.home;
+  }
+
   if (name === "home") return renderHome();
   if (name === "about") return renderAbout();
   if (name === "work") return renderWork(detail || "all");
