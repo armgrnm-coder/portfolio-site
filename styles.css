@@ -13,6 +13,11 @@
   --radius: 8px;
 }
 
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -32,6 +37,7 @@ body {
     radial-gradient(ellipse 48% 58% at 18% 88%, rgba(60, 105, 45, 0.45), transparent),
     radial-gradient(ellipse 38% 46% at 55% 48%, rgba(25, 50, 20, 0.5), transparent),
     radial-gradient(ellipse 66% 36% at 40% 5%, rgba(90, 140, 65, 0.3), transparent),
+    radial-gradient(ellipse 55% 48% at 88% 12%, rgba(220, 150, 35, 0.28), transparent),
     #253d22;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow-x: hidden;
@@ -56,7 +62,7 @@ img {
   inset: 0;
   pointer-events: none;
   z-index: 50;
-  opacity: 0.18;
+  opacity: 0.26;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
@@ -818,6 +824,54 @@ h1,
   }
 }
 
+/* ─── Custom cursor ─────────────────────────────────────────────── */
+
+@media (pointer: fine) {
+  body, body * { cursor: none !important; }
+
+  .cursor-dot {
+    position: fixed;
+    z-index: 9999;
+    left: -20px;
+    top: -20px;
+    width: 7px;
+    height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 160ms ease, height 160ms ease;
+    will-change: left, top;
+  }
+
+  .cursor-ring {
+    position: fixed;
+    z-index: 9998;
+    left: -20px;
+    top: -20px;
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid rgba(255, 199, 96, 0.65);
+    border-radius: 50%;
+    background: transparent;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 240ms cubic-bezier(0.2, 0.9, 0.2, 1.25), height 240ms cubic-bezier(0.2, 0.9, 0.2, 1.25), background 240ms ease;
+    will-change: left, top;
+  }
+
+  .cursor-ring.hovered {
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 199, 96, 0.08);
+  }
+
+  .cursor-dot.hovered {
+    width: 5px;
+    height: 5px;
+  }
+}
+
 /* ─── Portfolio banner (top of home) ─────────────────────────────── */
 
 .portfolio-banner {
@@ -882,7 +936,10 @@ h1,
   font-style: italic;
   font-weight: 700;
   line-height: 0.9;
-  color: var(--cream);
+  background: linear-gradient(170deg, var(--cream) 55%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: -0.02em;
   position: relative;
   z-index: 2;
@@ -2954,4 +3011,47 @@ body.reveal-ready [data-reveal].is-visible {
   .blog-card-body {
     padding: 1.25rem;
   }
+}
+
+/* ─── Featured first blog card ──────────────────────────────────── */
+
+@media (min-width: 541px) {
+  .blog-card:first-child.blog-card--has-cover .blog-card-link {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+  }
+
+  .blog-card:first-child.blog-card--has-cover .blog-card-cover {
+    aspect-ratio: unset;
+    min-height: 280px;
+    height: 100%;
+  }
+
+  .blog-card:first-child.blog-card--has-cover .blog-card-cover img {
+    height: 100%;
+    min-height: 280px;
+  }
+
+  .blog-card:first-child.blog-card--has-cover .blog-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 2rem 2rem 1.75rem;
+  }
+
+  .blog-card:first-child.blog-card--has-cover .blog-card-title {
+    font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+  }
+}
+
+/* ─── Footer closing line ───────────────────────────────────────── */
+
+.footer-closing {
+  text-align: center;
+  padding: 0 clamp(1rem, 4vw, 3rem) 1.4rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(0.88rem, 1.5vw, 1rem);
+  color: rgba(246, 240, 217, 0.35);
+  margin: 0;
 }
