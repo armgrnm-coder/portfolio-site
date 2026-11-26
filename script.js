@@ -2,7 +2,7 @@ const img = (name) => `assets/extracted/${name}`;
 
 const links = {
   email: "mailto:armgrnm@gmail.com",
-  linkedin: "https://tinyurl.com/53juyxdw",
+  linkedin: "https://www.linkedin.com/in/airie-mae-geronimo-4aa204272/",
   facebookPost: "https://www.facebook.com/share/p/15LU3Sekgh/",
   photoFiles: "#contact"
 };

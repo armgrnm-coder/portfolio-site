@@ -1,20 +1,39 @@
 User-agent: *
 Allow: /
 
-# AI search crawlers — explicitly allowed for GEO
+# AI search and assistant crawlers, explicitly allowed for GEO
+# OpenAI: ChatGPT Search, user-triggered browsing, training
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
-User-agent: Google-Extended
+# Anthropic: Claude search, user-triggered fetches, training
+User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
-User-agent: ClaudeBot
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google and Apple AI features
+User-agent: Google-Extended
 Allow: /
 
 User-agent: Applebot-Extended
