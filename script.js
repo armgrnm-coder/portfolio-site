@@ -191,6 +191,18 @@ const categories = [
         stackLayout: true
       },
       {
+        title: "Upcomers — 93% Off Promotion",
+        kind: "Social media campaign",
+        label: "2026",
+        tools: "Figma",
+        text:
+          "Two takes on one limited-time offer: 93% off selected Instant, 1-Step, and 2-Step challenges, from $19.90. One leans into glossy, inflated 3D numerals with a tilted Limited Time tag; the other goes dark and moody, with oversized black type glowing out of a blurred purple field. Same message, two very different moods to test against each other.",
+        orionAds: [
+          { file: "upcomers-93-off-01-3d.jpg", alt: "Upcomers 93% off promo with glossy 3D numerals and a Limited Time tag" },
+          { file: "upcomers-93-off-02-blur.jpg", alt: "Upcomers 93% off promo with black glowing type on a blurred purple background" }
+        ]
+      },
+      {
         title: "Logo Collection",
         kind: "Brand identity",
         text:
