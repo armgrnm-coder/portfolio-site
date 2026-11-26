@@ -3,6 +3,7 @@ const img = (name) => `assets/extracted/${name}`;
 const links = {
   email: "mailto:armgrnm@gmail.com",
   linkedin: "https://www.linkedin.com/in/airie-mae-geronimo-4aa204272/",
+  instagram: "https://www.instagram.com/armgrnm/",
   facebookPost: "https://www.facebook.com/share/p/15LU3Sekgh/",
   photoFiles: "#contact"
 };
@@ -851,7 +852,9 @@ function icon(name) {
     chat:
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg>',
     linkedin:
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h3v10H5zM5 5h3v3H5zM11 9h3v1.5c.6-1 1.6-1.7 3.1-1.7 2.2 0 3.9 1.4 3.9 4.5V19h-3v-5.2c0-1.4-.5-2.2-1.7-2.2-1.3 0-2.3.9-2.3 2.5V19h-3z"/></svg>'
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h3v10H5zM5 5h3v3H5zM11 9h3v1.5c.6-1 1.6-1.7 3.1-1.7 2.2 0 3.9 1.4 3.9 4.5V19h-3v-5.2c0-1.4-.5-2.2-1.7-2.2-1.3 0-2.3.9-2.3 2.5V19h-3z"/></svg>',
+    instagram:
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><path d="M16.6 7.4h.01"/></svg>'
   };
   return icons[name] || "";
 }
@@ -1618,6 +1621,7 @@ function renderContact() {
             <a class="contact-link icon-link" href="tel:+639997827445"><span>${icon("phone")} Phone</span><span>+63 999 782 7445</span></a>
             <a class="contact-link icon-link" href="https://wa.me/639997827445" target="_blank" rel="noreferrer"><span>${icon("chat")} WhatsApp / Viber</span><span>+63 999 782 7445</span></a>
             <a class="contact-link icon-link" href="${links.linkedin}" target="_blank" rel="noreferrer"><span>${icon("linkedin")} LinkedIn</span><span>Air Mae G.</span></a>
+            <a class="contact-link icon-link" href="${links.instagram}" target="_blank" rel="noreferrer"><span>${icon("instagram")} Instagram</span><span>@armgrnm</span></a>
           </div>
         </div>
       </section>
