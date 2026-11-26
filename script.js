@@ -308,6 +308,21 @@ const categories = [
     cover: img("p15-04-450x800.jpg"),
     projects: [
       {
+        title: "Upcomers — Apex Campaign",
+        kind: "Social media campaign",
+        label: "2026",
+        tools: "Figma · Photoshop · Illustrator",
+        text:
+          "Launch visuals for Apex, Upcomers' newest Instant challenge. Built around the idea of an apex predator: an eagle soaring over the ocean with the name set into the water, an eagle rising past a sunlit mountain range, and a snarling tiger breaking through giant type. Three takes on one message, \"Instant. No consistency.\", in Upcomers' deep-purple brand world.",
+        orionAds: [
+          { file: "upcomers-apex-01-eagle-ocean.jpg", alt: "Upcomers Apex ad: eagle soaring over the ocean with APEX set into the water" },
+          { file: "upcomers-apex-02-eagle-mountains.jpg", alt: "Upcomers Apex ad: Meet APEX, eagle flying past a sunlit mountain range" },
+          { file: "upcomers-apex-03-tiger.jpg", alt: "Upcomers Apex ad: snarling tiger in front of giant APEX type" }
+        ],
+        adCols: 3,
+        stackLayout: true
+      },
+      {
         title: "Valentine's Day Campaign — Spanish & Dubai Audiences",
         kind: "Social media campaign",
         label: "Paid Social · Carousel",
