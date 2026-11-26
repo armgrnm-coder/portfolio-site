@@ -623,6 +623,22 @@ const categories = [
         stackLayout: true
       },
       {
+        title: "UZO — BOGO + Free Reset, Black Friday Campaign",
+        kind: "Performance marketing",
+        label: "2026",
+        tools: "Figma · Photoshop · Illustrator",
+        text:
+          "Black Friday ads for UZO's two offers: buy one, get one free and free resets on failed evaluations, all from $22.71. Each ad has its own visual metaphor drawn in glowing contour lines (twin mountain peaks for BOGO, an hourglass for resets, hands catching the price, a low tide with a lone sailboat), while the price block, offer pills, and mint-on-purple palette stay consistent so the set reads as one campaign.",
+        orionAds: [
+          { file: "uzo-black-friday-01-bogo-mountains.jpg", alt: "UZO Black Friday ad: Buy one, get one free, with twin glowing mountain peaks" },
+          { file: "uzo-black-friday-02-free-resets-hourglass.jpg", alt: "UZO Black Friday ad: Free resets, with a glass hourglass" },
+          { file: "uzo-black-friday-03-catch-it-hands.jpg", alt: "UZO Black Friday ad: Catch it before the lights go out, hands cupping the $22.71 price" },
+          { file: "uzo-black-friday-04-low-tide.jpg", alt: "UZO Black Friday ad: Low tide, low prices, with a sailboat on glowing water" }
+        ],
+        adCols: 4,
+        stackLayout: true
+      },
+      {
         title: "20% OFF Campaign",
         kind: "Performance marketing",
         label: "Meta Ads Creative",
