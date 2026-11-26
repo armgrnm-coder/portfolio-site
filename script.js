@@ -205,6 +205,24 @@ const categories = [
         stackLayout: true
       },
       {
+        title: "Upcomers — YouTube Channel Promotion",
+        kind: "Social media campaign",
+        label: "2026",
+        tools: "Figma · Photoshop",
+        text:
+          "A set of posts driving traffic to Upcomers' YouTube channel of trader interviews. Each piece puts the real channel on a real device (desktop monitor, phone in a pocket, laptop on a couch) so the content does the selling, framed by short, confident headlines like \"Every trader has a story.\" and \"Press Play,\" plus a 10K subscriber milestone thank-you.",
+        orionAds: [
+          { file: "upcomers-youtube-01-every-trader-has-a-story.jpg", alt: "Upcomers YouTube promo: Every trader has a story, channel shown on a desktop monitor" },
+          { file: "upcomers-youtube-02-10k-subs.jpg", alt: "Upcomers 10K subscribers milestone post with the channel on a phone" },
+          { file: "upcomers-youtube-03-press-play.jpg", alt: "Upcomers YouTube promo: Press Play, new interviews every day" },
+          { file: "upcomers-youtube-04-screen-time.jpg", alt: "Upcomers YouTube promo: Turn screen time into trading, channel on a laptop" },
+          { file: "upcomers-youtube-05-watch-more.jpg", alt: "Upcomers YouTube promo: Watch more. Trade smarter. Laptop on a purple couch" }
+        ],
+        adCols: 3,
+        stackLayout: true,
+        centerRows: true
+      },
+      {
         title: "Logo Collection",
         kind: "Brand identity",
         text:
@@ -1082,10 +1100,12 @@ function websiteShowcase(tall, wide, title) {
   `;
 }
 
-function adGrid(assets, cols, title = "", kind = "") {
-  const style = cols ? ` style="grid-template-columns: repeat(${cols}, minmax(0, 1fr))"` : "";
+function adGrid(assets, cols, title = "", kind = "", centerRows = false) {
+  const style = centerRows
+    ? ` style="--cols: ${cols || 2}"`
+    : cols ? ` style="grid-template-columns: repeat(${cols}, minmax(0, 1fr))"` : "";
   return `
-    <div class="ad-grid"${style}>
+    <div class="ad-grid${centerRows ? " ad-grid--center" : ""}"${style}>
       ${assets.map((asset, i) => {
         const file = typeof asset === "string" ? asset : asset.file;
         const badge = typeof asset === "object" && asset.badge ? `<span class="ad-badge">${asset.badge}</span>` : "";
@@ -1446,7 +1466,7 @@ function renderCategory(category) {
                 <p>${project.text}</p>
                 ${project.tools ? `<p class="project-tools"><span>Tools:</span> ${project.tools}</p>` : ""}
               </div>
-              ${adGrid(project.orionAds, project.adCols, project.title, project.kind)}
+              ${adGrid(project.orionAds, project.adCols, project.title, project.kind, project.centerRows)}
             </article>
           ` : `
             <article class="project-block">
@@ -1459,7 +1479,7 @@ function renderCategory(category) {
                 <p>${project.text}</p>
                 ${project.tools ? `<p class="project-tools"><span>Tools:</span> ${project.tools}</p>` : ""}
               </div>
-              ${adGrid(project.orionAds, project.adCols, project.title, project.kind)}
+              ${adGrid(project.orionAds, project.adCols, project.title, project.kind, project.centerRows)}
             </article>
           `) : `
             <article class="project-block">
