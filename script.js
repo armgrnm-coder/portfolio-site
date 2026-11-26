@@ -223,6 +223,22 @@ const categories = [
         centerRows: true
       },
       {
+        title: "Upcomers — Brand & Trust Posts",
+        kind: "Social media campaign",
+        label: "2026",
+        tools: "Figma",
+        text:
+          "Four posts that build trust before the sell: a search-bar checklist on what traders can actually control, an announcement of Upcomers' listing on the TradeLocker Prop Firm Hub, a \"why traders choose Upcomers\" folder of six features, and a $50K-for-$49 offer card. Each one borrows a familiar UI pattern (search, comparison table, folder, checklist) so the message reads at a glance.",
+        orionAds: [
+          { file: "upcomers-trust-01-what-can-traders-control.jpg", alt: "Upcomers post: What can traders actually control? Search-style checklist" },
+          { file: "upcomers-trust-02-tradelocker-listing.jpg", alt: "Upcomers post: A prop firm you can rely on, listed on the TradeLocker Prop Firm Hub" },
+          { file: "upcomers-trust-03-why-traders-choose.jpg", alt: "Upcomers post: Why traders choose Upcomers, six features around a folder" },
+          { file: "upcomers-trust-04-50k-for-49.jpg", alt: "Upcomers post: $50K account for $49, bots and news welcome" }
+        ],
+        adCols: 4,
+        stackLayout: true
+      },
+      {
         title: "Logo Collection",
         kind: "Brand identity",
         text:
