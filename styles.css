@@ -1338,6 +1338,7 @@ h1,
 .ad-tile {
   position: relative;
   display: block;
+  align-self: start;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid rgba(246, 240, 217, 0.14);

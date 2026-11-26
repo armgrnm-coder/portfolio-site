@@ -200,7 +200,9 @@ const categories = [
         orionAds: [
           { file: "upcomers-93-off-01-3d.jpg", alt: "Upcomers 93% off promo with glossy 3D numerals and a Limited Time tag" },
           { file: "upcomers-93-off-02-blur.jpg", alt: "Upcomers 93% off promo with black glowing type on a blurred purple background" }
-        ]
+        ],
+        adCols: 2,
+        stackLayout: true
       },
       {
         title: "Logo Collection",
