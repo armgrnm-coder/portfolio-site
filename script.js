@@ -173,6 +173,24 @@ const categories = [
     cover: img("graphic-design-cover.jpg"),
     projects: [
       {
+        title: "Upcomers",
+        kind: "Social media campaign",
+        label: "2026",
+        tools: "Figma · Photoshop · Illustrator",
+        text:
+          "A series of social visuals for Upcomers, a prop trading firm. Concept-led pieces like a turtle on a skateboard and a house cat stepping through a door as a tiger turn trading ideas into a single image, while proof posts, a Pakistan market launch, and a Telegram community push carry the same deep-purple brand system with cinematic lighting and clean, confident type.",
+        orionAds: [
+          { file: "upcomers-01-slow-rewards.jpg", alt: "Upcomers ad: Slow rewards? Shell no! — turtle on a skateboard" },
+          { file: "upcomers-02-step-in-small.jpg", alt: "Upcomers ad: Step in small, step out stronger — cat walking through a door as a tiger" },
+          { file: "upcomers-03-get-funded.jpg", alt: "Upcomers ad: Get funded. Get rewarded. — crowned logo mark" },
+          { file: "upcomers-04-pakistan-launch.jpg", alt: "Upcomers Pakistan launch announcement with Minar-e-Pakistan" },
+          { file: "upcomers-05-telegram.jpg", alt: "Upcomers Telegram community announcement" },
+          { file: "upcomers-06-payout-10m.jpg", alt: "Upcomers $10M+ total payout milestone with silver trophy" }
+        ],
+        adCols: 3,
+        stackLayout: true
+      },
+      {
         title: "Logo Collection",
         kind: "Brand identity",
         text:
