@@ -545,6 +545,21 @@ const categories = [
     cover: img("orion-ad-03.jpg"),
     projects: [
       {
+        title: "Upcomers x Hyperliquid Campaign",
+        kind: "Performance marketing",
+        label: "2026",
+        tools: "Figma · Photoshop · Illustrator",
+        text:
+          "Paid ads for the Upcomers x Hyperliquid partnership, one creative per challenge: Thunderbolt, Oracle, and Horizon & Odyssey. Each ad leads with a single oversized hook (the price or \"No Consistency\") rising out of glowing water, merging Upcomers' purple with Hyperliquid's mint green, then backs it up with three quick benefits and a clear Get started CTA.",
+        orionAds: [
+          { file: "upcomers-hyperliquid-01-thunderbolt.jpg", alt: "Upcomers x Hyperliquid ad: Thunderbolt, 100K for $99, with a mint water splash" },
+          { file: "upcomers-hyperliquid-02-oracle.jpg", alt: "Upcomers x Hyperliquid ad: Oracle, Instant 100K for $169, rising from the water" },
+          { file: "upcomers-hyperliquid-03-horizon-odyssey.jpg", alt: "Upcomers x Hyperliquid ad: Horizon & Odyssey, trade 24/7 with no consistency" }
+        ],
+        adCols: 3,
+        stackLayout: true
+      },
+      {
         title: "20% OFF Campaign",
         kind: "Performance marketing",
         label: "Meta Ads Creative",
