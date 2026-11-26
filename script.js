@@ -335,6 +335,21 @@ const categories = [
         stackLayout: true
       },
       {
+        title: "UZO — 1-Step, 2-Step & Instant Campaign",
+        kind: "Social media campaign",
+        label: "2026",
+        tools: "Figma",
+        text:
+          "An 80%-off sale for UZO's Flex challenges, with one creative per product. Instant Flex leads with a single giant price, One Step Flex lays every account size out as a glassy price ladder with the $100K highlighted as most popular, and Two Step Flex turns the size picker into a desktop of folders with a cursor mid-choice. Pill-shaped labels, condensed price type, and a purple-to-mint gradient tie all three together.",
+        orionAds: [
+          { file: "uzo-flex-01-instant-flex.jpg", alt: "UZO Instant Flex ad: $100K instant access for $312.86, 80% off" },
+          { file: "uzo-flex-02-one-step-flex.jpg", alt: "UZO One Step Flex ad: price ladder for every account size, 80% off" },
+          { file: "uzo-flex-03-two-step-flex.jpg", alt: "UZO Two Step Flex ad: Which size are you flexing? with prices shown as folders" }
+        ],
+        adCols: 3,
+        stackLayout: true
+      },
+      {
         title: "Valentine's Day Campaign — Spanish & Dubai Audiences",
         kind: "Social media campaign",
         label: "Paid Social · Carousel",
